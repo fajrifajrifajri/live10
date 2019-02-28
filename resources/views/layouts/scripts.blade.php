@@ -23,4 +23,15 @@
                     }
                 }
             })
+
+
+        function Dokter1() {
+            document.getElementById("dokter-1").style.display = "";
+            document.getElementById("dokter-2").style.display = "none";
+        }
+
+        function Dokter2() {
+            document.getElementById("dokter-2").style.display = "";
+            document.getElementById("dokter-1").style.display = "none";
+        }
 </script>
