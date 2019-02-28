@@ -7,5 +7,6 @@
 <link rel="stylesheet" href="{{ asset('css/pages/jadwal.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dokter.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/janji.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pages/nomor.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/admin.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dashboard.css') }}">
