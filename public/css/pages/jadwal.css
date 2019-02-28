@@ -1,0 +1,32 @@
+/******************* JADWAL *******************/
+
+#jadwal {
+    background-color: #FBF9F9;
+    padding: 6em;
+    color: #707070;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#jadwal div h1 {
+    margin-bottom: 3em;
+}
+
+#jadwal * .dropdown {
+    margin-bottom: 2em;
+}
+
+#jadwal * .btn-light {
+    width: 20%;
+    border-color: #707070;
+}
+
+#banner { 
+    background-color: #648753;
+    color: #FFF;
+    padding: 2em;
+    font-family: sans-serif;
+}
+
+#banner h4 {
+    margin-bottom: 1em;
+}

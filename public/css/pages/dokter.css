@@ -1,0 +1,48 @@
+/******************* DOKTER *******************/
+
+#dokter {
+    background-color: #FBF9F9;
+    padding: 6em;
+    color: #707070;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#dokter div h1 {
+    margin-bottom: 3em;
+}
+
+#dokter div div .col-lg-9 {
+    border: 1px solid #C5C5C5;
+    background-color: #FFF;
+    padding: 2em 3em;
+}
+
+#dokter div div div:nth-of-type(2) .row {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+#dokter div div div:nth-of-type(2) .row div img {
+    margin-bottom: 1em;
+}
+
+#dokter * button {
+    border-color: #C5C5C5;
+    border-radius: 0;
+    padding: 1em;
+}
+
+#dokter * .btn-light {
+    background-color: #FFF;
+}
+
+#dokter div div div .btn-block + .btn-block {
+    margin-top: 0;
+}
+
+.dokter-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 15%;
+}

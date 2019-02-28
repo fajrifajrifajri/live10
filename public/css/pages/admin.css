@@ -1,0 +1,19 @@
+/******************* ADMIN *******************/
+
+#admin {
+    display: flex;
+    height: 100vh;
+}
+
+#admin div {
+    margin: auto;
+}
+
+#admin div div div img {
+    display: block;
+    margin: 0 auto;
+}
+
+#admin * a {
+    display: block;
+}

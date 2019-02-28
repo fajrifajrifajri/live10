@@ -1,0 +1,85 @@
+@extends('layouts.app')
+
+@section('title')
+    Jadwal Harian | {{ config ('app.name', 'RS Borobudur')}}
+@endsection
+
+@section('content')
+    <div id="jadwal">
+        <div class="container">
+            <h1 class="text-center">JADWAL</h1>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div id="banner">
+                        <h4>RS BOROBUDUR</h4>
+                        <p>Jl. Ampera No.37 Pontianak</p>
+                        <p>Call Centre : 1500-908</p>
+                        <p>IGD & Ambulans Direct Line : 1500-907</p>
+                        <p>Business Support : 62-21 2800888 | Fax : 62-21 2800 755</p>
+                        <p>Email : administrator@borobudur.hospital</p>
+                        <p>Web : rs-borobudur.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <h4>Find your doctor</h4>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Specialty
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Gigi</a>
+                            <a class="dropdown-item" href="#">Umum</a>
+                            <a class="dropdown-item" href="#">Anak</a>
+                        </div>
+                    </div>
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nama Dokter</th>
+                            <th scope="col">Senin</th>
+                            <th scope="col">Selasa</th>
+                            <th scope="col">Rabu</th>
+                            <th scope="col">Kamis</th>
+                            <th scope="col">Jumat</th>
+                            <th scope="col">Sabtu</th>
+                            <th scope="col">Minggu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">dr. Sukmawati</th>
+                            <td>08.00-10.00</td>
+                            <td>-</td>
+                            <td>08.00-10.00</td>
+                            <td>08.00-10.00</td>
+                            <td>-</td>
+                            <td>13.00-15.30</td>
+                            <td>-</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">dr. Sukamoljo</th>
+                            <td>08.00-10.00</td>
+                            <td>-</td>
+                            <td>08.00-10.00</td>
+                            <td>08.00-10.00</td>
+                            <td>-</td>
+                            <td>13.00-15.30</td>
+                            <td>-</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">dr. Kevin Situmorang</th>
+                            <td>08.00-10.00</td>
+                            <td>-</td>
+                            <td>08.00-10.00</td>
+                            <td>08.00-10.00</td>
+                            <td>-</td>
+                            <td>13.00-15.30</td>
+                            <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

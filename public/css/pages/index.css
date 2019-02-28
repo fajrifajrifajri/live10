@@ -1,0 +1,199 @@
+/******************* NAVBAR *******************/
+
+#navbar-top {
+    background-color: #384551;
+    color: #FFF;
+}
+
+#navbar-top div div div ul {
+    list-style: none;
+    padding: 0;
+    margin: -0.5em;
+    display: inline-block;
+}
+
+#navbar-top div div div ul li {
+    display: inline-block;
+    margin: 0.9em 0.4em;
+}
+
+#navbar-top div div div:nth-last-child(1) {
+    text-align: right;
+}
+
+#navbar-top div div div:nth-last-child(1) ul li:nth-of-type(1) {
+    width: 8em;
+}
+
+.clr-pnk, .nav-link {
+    color: #E37F7F;
+}
+
+#navbar-bottom div div ul li:nth-last-child(1) {
+    margin-left: 3em;
+}
+
+#navbar-bottom div div ul li:nth-last-child(1) a {
+    color: #FFF;
+}
+
+#paralleogram {
+    position: absolute;
+    top: 0%;
+    left: 83%;
+    width: 150px;
+    height: 150px;
+    transform: skew(-20deg);
+    background-color: #E37F7F;
+    z-index: -1;
+}
+
+/******************* JUMBOTRON *******************/
+
+.jumbotron {
+    background: url(../../img/Jumbotron.png) no-repeat;
+    background-size: cover;
+    height: 460px;
+    margin-bottom: 0;
+}
+
+/******************* ABOUT *******************/
+
+#about {
+    background-color: #F3EEEE;
+    font-family: 'Open Sans', sans-serif;
+    color: #707070;
+    padding-bottom: 3em;
+}
+
+#about div div h2 {
+    padding: 3em;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+#about div div:nth-of-type(2) div h5 {
+    font-weight: 600;
+}
+
+
+/******************* GENERAL *******************/
+
+body {
+    background-color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/******************* LINE *******************/
+
+#line {
+    background-color: #534B4B;
+    text-align: center;
+    color: #FFF;
+    padding: 3em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#line h4 {
+    margin-bottom: 0.5em;
+}
+
+#line h1 {
+    margin-bottom: 1em;
+}
+
+#line a {
+    background-color: #FFF;
+    border-radius: 2em;
+    border: 0;
+    padding: 1em 2em;
+    color: #707070;
+    font-weight: 600;
+}
+
+/******************* REVIEW *******************/
+
+#review {
+    background-color: #648753;
+    text-align: center;
+    padding: 3em;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#review h3 {
+    margin-bottom: 2em;
+}
+
+#review img {
+    margin-bottom: 1em;
+}
+
+#review p {
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
+.review-img {
+    display: inline-block !important;
+    width: 150px !important;
+    height: 150px;
+    object-fit: cover;
+    object-position: 15%;
+}
+
+.owl-prev {
+    position: absolute;
+    top: 15%;
+    left: 38%;
+    font-size: 1.5em !important;
+}
+
+.owl-next {
+    position: absolute;
+    top: 16%;
+    right: 38%;
+    font-size: 1.5em !important;
+}
+
+/******************* FOOTER *******************/
+
+#footer-top {
+    padding: 3em;
+    color: #707070;
+}
+
+#footer-top div div div:nth-of-type(2) ul {
+    list-style: none;
+}
+
+#footer-top div div div:nth-last-of-type(1) ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+
+#footer-top div div div:nth-last-of-type(1) ul li {
+    margin-right: 0.5em;
+    display: inline-block;
+    font-size: 2em;
+}
+
+.clr-bl {
+    color: #81D6EC;
+}
+
+#footer-bottom {
+    background-color: #384551;
+    color: #FFF;
+    padding: 1em;
+}
+
+#footer-bottom div div {
+    display: inline-block;
+}

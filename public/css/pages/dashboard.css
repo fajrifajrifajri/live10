@@ -1,0 +1,22 @@
+/******************* DASHBOARD *******************/
+
+#dashboard {
+    height: 100vh;
+}
+
+#dashboard nav {
+    background-color: #384551;
+}
+
+#dashboard .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#dashboard * div:nth-of-type(1) {
+    background-color: #9ACFFF;
+}
+
+#dashboard * div:nth-of-type(2) {
+    background-color: #FBF9F9;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | {{ config ('app.name', 'RS Borobudur')}}</title>
+    @include('layouts.css')
+</head>
+<body id="dashboard">
+    <nav>
+        <img src="{{ asset('img/Borobudur logo.png') }}" alt="borobudur logo">
+    </nav>
+    <main class="row">
+        <div class="col-lg-3">
+            <div id="profile">
+                <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
+                <p>Mas Dimas</p>
+            </div>
+            <div>
+                <a href="">DASHBOARD</a>
+                <a href="">JANJI DOKTER</a>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                    <th scope="col">No. Telpon</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nama Lengkap</th>
+                    <th scope="col">Tanggal Lahir</th>
+                    <th scope="col">Nama Dokter</th>
+                    <th scope="col">Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">+62 8139521121</th>
+                    <td>ria2@gmail.com</td>
+                    <td>Ria Rahmawaati</td>
+                    <td>05-12-19870</td>
+                    <td>Agus Wicaksono</td>
+                    <td>29-03-2019</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">+62 8139521121</th>
+                    <td>ria2@gmail.com</td>
+                    <td>Ria Rahmawaati</td>
+                    <td>05-12-19870</td>
+                    <td>Agus Wicaksono</td>
+                    <td>29-03-2019</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">+62 8139521121</th>
+                    <td>ria2@gmail.com</td>
+                    <td>Ria Rahmawaati</td>
+                    <td>05-12-19870</td>
+                    <td>Agus Wicaksono</td>
+                    <td>29-03-2019</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    @include('layouts.scripts')
+</body>
+</html>
+    
