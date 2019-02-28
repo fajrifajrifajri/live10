@@ -17,6 +17,10 @@
     padding: 2em 3em;
 }
 
+#dokter-2 {
+    display: none;
+}
+
 #dokter div div div:nth-of-type(2) .row,
 #dokter div div div:nth-of-type(3) .row {
     text-align: center;
