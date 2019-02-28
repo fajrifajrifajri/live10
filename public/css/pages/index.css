@@ -172,6 +172,19 @@ img {
     list-style: none;
 }
 
+#footer-top div div div:nth-of-type(2) ul li svg {
+    font-size: 1.1em;
+    margin-right: 0.6em;
+}
+
+#footer-top div div div:nth-of-type(2) ul li:nth-last-child(1) svg {
+    font-size: 1.4em;
+}
+
+#footer-top div div div:nth-of-type(2) ul li:nth-last-child(1) span {
+    padding-left: 2em;
+}
+
 #footer-top div div div:nth-last-of-type(1) ul {
     list-style: none;
     display: inline-block;

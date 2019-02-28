@@ -7,9 +7,10 @@
             <div class="col-lg-5">
                 <ul>
                     <h5>Hubungi Kami</h5>
-                    <li>+0561-744959 5</li>
-                    <li>administrator@borobudur.hospital</li>
-                    <li>rs. borobudur<br>jl. ampera no.37 pontianak
+                    <li><span class="fas fa-phone clr-bl" aria-hidden="true"></span>+0561-744959 5</li>
+                    <li><span class="fas fa-mail-bulk clr-bl"></span>administrator@borobudur.hospital</li>
+                    <li><span class="fas fa-map-marker-alt clr-bl"></span>rs. borobudur<br>
+                        <span>jl. ampera no.37 pontianak</span>
                     </li>
                 </ul>
             </div>
