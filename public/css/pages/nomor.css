@@ -1,5 +1,9 @@
 /******************* AMBIL NOMOR *******************/
 
+#nomor {
+    margin: 5em;
+}
+
 #nomor * .btn-light {
     width: 20%;
     border-color: #707070;
