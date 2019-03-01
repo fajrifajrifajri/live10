@@ -14,8 +14,8 @@
                 <img src="{{ asset('img/Borobudur logo.png') }}" alt="borobudur logo">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <label for="exampleInputUsername1">Username</label>
+                        <input type="text" class="form-control" id="exampleInputUsername1" aria-describedby="usernameHelp" placeholder="Enter username">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
