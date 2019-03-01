@@ -6,6 +6,19 @@
 
 #dashboard nav {
     background-color: #384551;
+    padding: 1em 4em;
+}
+
+#dashboard nav img {
+    width: 7%;
+}
+
+#dashboard main {
+    text-align: center;
+}
+
+#dashboard main div div:nth-last-child(1) a {
+    display: block;
 }
 
 #dashboard .row {
@@ -13,10 +26,50 @@
     margin-right: 0;
 }
 
-#dashboard * div:nth-of-type(1) {
+#dashboard main div:nth-last-child(2) {
     background-color: #9ACFFF;
 }
 
-#dashboard * div:nth-of-type(2) {
-    background-color: #FBF9F9;
+#dashboard * a {
+    color: #FBF9F9;
+    text-decoration: none;
+}
+
+#profile {
+    background-color: #E37F7F !important;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 1em 1em 0.1em 1em;
+    color: #FFF;
+}
+
+#profile img {
+    margin-bottom: 0.5em;
+    width: 120px;
+    height: 120px;
+}
+
+#menu {
+    position: relative;
+    min-height: 275px;
+    font-size: 1.2em;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#menu a:nth-last-of-type(1) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    width: 100%;
+}
+
+#menu a:nth-last-of-type(2) {
+    background-color: #6BB9FF;
+    padding: 1em;
+}
+
+#menu a:nth-last-of-type(3) {
+    padding: 1em;
 }

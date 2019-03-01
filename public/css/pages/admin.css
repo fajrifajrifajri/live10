@@ -3,6 +3,7 @@
 #admin {
     display: flex;
     height: 100vh;
+    background-color: #FBF9F9;
 }
 
 #admin div {
@@ -12,8 +13,39 @@
 #admin div div div img {
     display: block;
     margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+#admin div div div form {
+    padding: 3em;
+    background-color: #FFF;
+    margin-bottom: 2em;
+}
+
+#admin div div div form div:nth-child(2) {
+    margin-bottom: 1em;
+}
+
+#admin div div div form div:nth-child(3) {
+    display: inline-block;
+}
+
+#admin div div div form button {
+    display: inline-block;
 }
 
 #admin * a {
     display: block;
+    color: #81d6ec;
+}
+
+div.position-relative {
+    padding-left: 1em;
+}
+
+#admin * .fa-arrow-left {
+    position: absolute;
+    top: 58%;
+    left: -4%;
+    color: #81d6ec;
 }

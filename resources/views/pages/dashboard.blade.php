@@ -12,17 +12,18 @@
         <img src="{{ asset('img/Borobudur logo.png') }}" alt="borobudur logo">
     </nav>
     <main class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-2">
             <div id="profile">
                 <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
                 <p>Mas Dimas</p>
             </div>
-            <div>
+            <div id="menu">
                 <a href="">DASHBOARD</a>
                 <a href="">JANJI DOKTER</a>
+                <a href="">LOGOUT</a>
             </div>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-10">
             <table class="table table-striped text-center">
                 <thead>
                     <tr>
@@ -63,6 +64,12 @@
             </table>
         </div>
     </main>
+    <footer id="footer-bottom">
+        <div class="container">
+            <div>Copyright 2019. All rights reserved | Rumah Sakit Borobudur</div>
+            <div class="float-right">Designed by <span>Jasbuweb.com</span></div>
+        </div>
+    </footer>
     @include('layouts.scripts')
 </body>
 </html>

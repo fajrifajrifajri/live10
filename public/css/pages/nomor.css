@@ -1,11 +1,21 @@
 /******************* AMBIL NOMOR *******************/
 
 #nomor {
-    margin: 5em;
+    background-color: #FBF9F9;
+    padding: 5em;
 }
 
 #nomor * .btn-light {
-    width: 20%;
+    width: 100%;
     border-color: #707070;
     margin-bottom: 2em;
+}
+
+.dropdown-toggle:empty::after {
+    position: relative;
+    left: 45%;
+}
+
+.dropdown-menu {
+    width: 100%;
 }
