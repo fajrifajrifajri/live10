@@ -15,6 +15,12 @@ class CreateJanjiPasienTable extends Migration
     {
         Schema::create('janji_pasien', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('notelp');
+            $table->string('email');
+            $table->string('nama_pasien');
+            $table->date('tgllahir_pasien');
+            $table->string('nama_dokter');
+            $table->date('tgl_bertemu');
             $table->timestamps();
         });
     }
