@@ -66,6 +66,34 @@
                 alert('field harus diisi smua');
             }
         });
+        $('#floginadmin').on('submit',e=>{
+            e.preventDefault();
+            let data = $('#floginadmin').serialize();
+            if($('#username').val() && $('#password').val()){
+                $.ajax({
+                    type:'POST',
+                    url:'/adminlogin',
+                    data:data,
+                    beforeSend: ()=>{
+
+                    },
+                    success: res =>{
+                        if(res){
+                            alert(res)
+                        }else{
+                            location.href = '/dashboard'
+                        }
+                    },
+                    error: xhr =>{
+                        alert('Password Salah');
+                        // console.log(xhr);
+                        console.log(xhr.responseJSON.message);
+                    }
+                })
+            }else{
+                alert('field tidak boleh kosong')
+            }
+        })
     });
 
 

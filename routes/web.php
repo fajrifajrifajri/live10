@@ -32,9 +32,9 @@ Route::get('/ambil-nomor', [
     'as' => 'nomor'
 ]);
 Route::get('/admin', 'PagesController@getAdmin');
-Route::get('/dashboard', 'PagesController@getDashboard');
 Route::post('/adminlogin','auth@login');
 Route::post('/action-buatjanji',"action@buatjanji");
+Route::get('/logout',"action@logout");
 Route::middleware('usercheck')->group(function(){
-
+    Route::get('/dashboard', 'PagesController@getDashboard');
 });

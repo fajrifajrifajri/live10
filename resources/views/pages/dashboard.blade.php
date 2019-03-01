@@ -20,7 +20,7 @@
             <div id="menu">
                 <a href="">DASHBOARD</a>
                 <a href="">JANJI DOKTER</a>
-                <a href="">LOGOUT</a>
+                <a href="{{url('/logout')}}">LOGOUT</a>
             </div>
         </div>
         <div class="col-lg-10">

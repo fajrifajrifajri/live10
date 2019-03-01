@@ -18,4 +18,8 @@ class action extends Controller
         $janji->save();
         return "";
     }
+    function logout(){
+        \Session::forget('user');
+        return redirect('/admin');
+    }
 }
