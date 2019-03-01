@@ -15,6 +15,10 @@ class usercheck
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if(\Session::get('user')){
+            return $next($request);
+        }else {
+            return redirect('/admin');
+        }
     }
 }

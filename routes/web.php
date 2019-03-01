@@ -33,3 +33,6 @@ Route::get('/ambil-nomor', [
 ]);
 Route::get('/admin', 'PagesController@getAdmin');
 Route::get('/dashboard', 'PagesController@getDashboard');
+Route::middleware('usercheck')->group(function(){
+
+});

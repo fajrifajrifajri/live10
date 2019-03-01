@@ -34,7 +34,7 @@
                             <input type="date" class="form-control" name="tgl_bertemu" id="tgl_bertemu" placeholder="Tanggal bertemu">
                         </div>
                     </form>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">SELANJUTNYA</button>
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="SELANJUTNYA">
                 </div>
             </div>
         </div>
