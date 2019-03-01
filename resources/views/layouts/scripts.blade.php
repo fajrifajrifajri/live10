@@ -27,7 +27,7 @@
         });
         $('#fbuatjanji').on('submit', e =>{
             e.preventDefault();
-            let data = $('#fbuatjanji').serialize();
+            const data = $(this).serialize();
             // atau new FormData(this) -> tapi ini sebisa mungkin
             // buat ajax gmbr doang karena makan cache gede
             let checkinput = true;
@@ -37,7 +37,6 @@
                     //alert(`${$(elem).attr("id")} || ${$(elem).val()}`);
                 }
             });
-            alert(data);
             if(checkinput) {
                 $.ajax({
                     type: 'POST',

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\dokter;
 
 class PagesController extends Controller
 {
@@ -16,7 +17,10 @@ class PagesController extends Controller
         return view('pages.dokter');
     }
     public function getBuatjanji(){
-        return view('pages.buat-janji');
+        $dokter = new dokter();
+        return view('pages.buat-janji',[
+            "data"=>$dokter::all()
+        ]);
     }
     public function getAmbilnomor(){
         return view('pages.ambil-nomor');
