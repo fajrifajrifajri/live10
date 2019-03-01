@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', 'PagesController@getIndex');
+Route::get('/', [
+    'uses' => 'PagesController@getIndex',
+    'as' => 'home'
+]);
 Route::get('/jadwal', [
     'uses' => 'PagesController@getJadwal',
     'as' => 'jadwal'

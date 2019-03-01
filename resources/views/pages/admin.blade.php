@@ -30,7 +30,7 @@
                 <div class="position-relative">
                     <a href="">Lost your password?</a>
                     <span class="fas fa-arrow-left"></span>
-                    <a href="">Back to home</a>
+                    <a href="{{ route('home') }}">Back to home</a>
                 </div>
             </div>
         </div>

@@ -54,7 +54,7 @@
     <section id="line">
         <h4> BUTUH PEMERIKSAAN DOKTER? </h4>
         <h1> DAFTAR SEKARANG UNTUK BEROBAT DI RS. BOROBUDUR </h1>
-        <a href="{{ route('nomor')}}" class="btn"> AMBIL NOMOR </a>
+        <a href="{{ route('nomor') }}" class="btn"> AMBIL NOMOR </a>
     </section>
 
     <section id="review">
