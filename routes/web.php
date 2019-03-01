@@ -33,6 +33,8 @@ Route::get('/ambil-nomor', [
 ]);
 Route::get('/admin', 'PagesController@getAdmin');
 Route::get('/dashboard', 'PagesController@getDashboard');
+Route::post('/adminlogin','auth@login');
+Route::post('/action-buatjanji',"action@buatjanji");
 Route::middleware('usercheck')->group(function(){
 
 });

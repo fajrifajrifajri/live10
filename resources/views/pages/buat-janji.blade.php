@@ -14,7 +14,8 @@
             </p>
             <div class="row">
                 <div class="col-lg-6">
-                    <form action="{{url('/action-buatjanji')}}" method="post">
+                    <form  method="post" id="fbuatjanji">
+                        {{csrf_field()}}
                         <div class="form-group">
                             <input type="text" class="form-control" name="notelp" id="notelp" placeholder="Nomor telpon anda">
                         </div>
@@ -33,8 +34,8 @@
                         <div class="form-group">
                             <input type="date" class="form-control" name="tgl_bertemu" id="tgl_bertemu" placeholder="Tanggal bertemu">
                         </div>
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="SELANJUTNYA">
                     </form>
-                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="SELANJUTNYA">
                 </div>
             </div>
         </div>
