@@ -41,6 +41,54 @@ class DatabaseSeeder extends Seeder
             'specialist' => "Anak",
             'gambardokter'=>"asd.jpg"
         ]);
+        DB::table('dokter')->insert([
+            'nama' => "Dr. Siparman",
+            'tipe_dokter' => "1",
+            'jadwalawal' => "2019-03-04",
+            'jadwalakhir' => "2019-03-05",
+            'specialist' => "Jantung",
+            'gambardokter'=>"asd.jpg"
+        ]);
+        DB::table('dokter')->insert([
+            'nama' => "Dr. Ramah",
+            'tipe_dokter' => "2",
+            'jadwalawal' => "2019-03-04",
+            'jadwalakhir' => "2019-03-05",
+            'specialist' => "Jantung",
+            'gambardokter'=>"asd.jpg"
+        ]);
+        DB::table('dokter')->insert([
+            'nama' => "Drs. Susanto",
+            'tipe_dokter' => "1",
+            'jadwalawal' => "2019-03-04",
+            'jadwalakhir' => "2019-03-05",
+            'specialist' => "Anak",
+            'gambardokter'=>"asd.jpg"
+        ]);
+        DB::table('dokter')->insert([
+            'nama' => "Dr. Budiarjo",
+            'tipe_dokter' => "1",
+            'jadwalawal' => "2019-03-04",
+            'jadwalakhir' => "2019-03-05",
+            'specialist' => "Hati",
+            'gambardokter'=>"asd.jpg"
+        ]);
+        DB::table('dokter')->insert([
+            'nama' => "Dr. Antonius",
+            'tipe_dokter' => "2",
+            'jadwalawal' => "2019-03-04",
+            'jadwalakhir' => "2019-03-05",
+            'specialist' => "Hati",
+            'gambardokter'=>"asd.jpg"
+        ]);
+        DB::table('dokter')->insert([
+            'nama' => "Dr. Wahid Bahyu",
+            'tipe_dokter' => "1",
+            'jadwalawal' => "2019-03-04",
+            'jadwalakhir' => "2019-03-05",
+            'specialist' => "Anak",
+            'gambardokter'=>"asd.jpg"
+        ]);
         DB::table('specialist_dokter')->insert([
             'specialist'=>"Jantung"
         ]);
