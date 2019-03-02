@@ -25,7 +25,7 @@ class PagesController extends Controller
     public function getBuatjanji(){
         $dokter = new dokter();
         return view('pages.buat-janji',[
-            "data"=>$dokter::all(),
+                "data"=>$dokter::all(),
         ]);
     }
     public function getAmbilnomor(){

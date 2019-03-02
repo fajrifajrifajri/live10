@@ -67,12 +67,15 @@
                 alert('field harus diisi smua');
             }
         });
-        $('#floginadmin').on('submit',function (e) {
+        $('#floginadmin').on('submit',e => {
             e.preventDefault();
-            let data = $(this).serialize();
+            let data = $('#floginadmin').serialize();
             if($('#username').val() && $('#password').val()){
                 $.ajax({
                     type:'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     url:'/adminlogin',
                     data:data,
                     beforeSend: ()=>{
@@ -90,7 +93,7 @@
                             type: 'error',
                             title: 'Oops...',
                             text: 'Username atau password yang dimasukkan salah!'
-                        })
+                        });
                         // console.log(xhr);
                         console.log(xhr.responseJSON.message);
                     }

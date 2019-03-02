@@ -17,10 +17,10 @@ class auth extends Controller
     function login(Request $r){
         $user = new admin();
         $data = $user::where('username',$r->username)->first();
-        $check = \Hash::check($r->password,optional($data->password));
+        $check = \Hash::check($r->password,$data->password);
         if($check){
             \Session::put('user',$r->username);
-            return null;
+            return "";
         }else{
             return "Password Salah";
         }
