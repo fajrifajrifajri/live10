@@ -27,13 +27,18 @@ class action extends Controller
     function pagi_dokter(Request $r){
         $dokter = new dokter();
         $tipe = new specialist();
-        $datatipe = $tipe::where('id',$r->pagination)->first();
-        $data = $dokter::where('specialist',$datatipe->specialist)->get();
+        $data = $datatipe = "";
+        if($r->pagination == "all"){
+            $data = $dokter::all();
+        }else {
+            $datatipe = $tipe::where('id', $r->pagination)->first();
+            $data = $dokter::where('specialist', $datatipe->specialist)->get();
+        }
         if($data) {
             foreach ($data as $pagination) {
                 return "
                 <div class=\"col-lg-4\">
-                    <img src=\"{{ asset('img/Female doctor.jpg') }}\" class=\"rounded-circle dokter-img\" alt=\"dokter\">
+                    <img src=\"http://localhost:8000/img/Female doctor.jpg \" class=\"rounded-circle dokter-img\" alt=\"dokter\">
                     <p> $pagination[nama] </p>
                 </div>
             ";
