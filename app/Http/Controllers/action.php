@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\dokter;
+use App\specialist;
 use Illuminate\Http\Request;
 use App\janji_pasien;
 
@@ -21,5 +23,27 @@ class action extends Controller
     function logout(){
         \Session::forget('user');
         return redirect('/admin');
+    }
+    function pagi_dokter(Request $r){
+        $dokter = new dokter();
+        $tipe = new specialist();
+        $datatipe = $tipe::where('id',$r->pagination)->first();
+        $data = $dokter::where('specialist',$datatipe->specialist)->get();
+        if($data) {
+            foreach ($data as $pagination) {
+                return "
+                <div class=\"col-lg-4\">
+                    <img src=\"{{ asset('img/Female doctor.jpg') }}\" class=\"rounded-circle dokter-img\" alt=\"dokter\">
+                    <p> $pagination[nama] </p>
+                </div>
+            ";
+            }
+        }else{
+            return "
+                <div class=\"col-lg-12\">
+                    <h1>Data Kosong</h1>
+                </div>
+            ";
+        }
     }
 }

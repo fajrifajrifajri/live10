@@ -34,6 +34,7 @@ Route::get('/ambil-nomor', [
 Route::get('/admin', 'PagesController@getAdmin');
 Route::post('/adminlogin','auth@login');
 Route::post('/action-buatjanji',"action@buatjanji");
+Route::post('/dokter-pagination',"action@pagi_dokter");
 Route::get('/logout',"action@logout");
 Route::middleware('usercheck')->group(function(){
     Route::get('/dashboard', 'PagesController@getDashboard');

@@ -26,13 +26,13 @@
                 }
             }
         });
-        $('#fbuatjanji').on('submit', e =>{
+        $('#fbuatjanji').on('submit', function(e){
             e.preventDefault();
             const data = $(this).serialize();
             // atau new FormData(this) -> tapi ini sebisa mungkin
             // buat ajax gmbr doang karena makan cache gede
             let checkinput = true;
-            $('#fbuatjanji').find('input').each((idx,elem)=>{
+            $(this).find('input').each((idx,elem)=>{
                 if($(elem).val() === ""){
                     checkinput = false;
                     //alert(`${$(elem).attr("id")} || ${$(elem).val()}`);
@@ -67,9 +67,9 @@
                 alert('field harus diisi smua');
             }
         });
-        $('#floginadmin').on('submit',e=>{
+        $('#floginadmin').on('submit',function (e) {
             e.preventDefault();
-            let data = $('#floginadmin').serialize();
+            let data = $(this).serialize();
             if($('#username').val() && $('#password').val()){
                 $.ajax({
                     type:'POST',
@@ -103,16 +103,30 @@
                 })
             }
         })
+        $('.btn-dokter').on('click', function () {
+            const data = $(this).data('dokter')
+            $.ajax({
+                type:'POST',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url:`${base_url}dokter-pagination`,
+                data:{
+                    pagination: data
+                },
+                success:res =>{
+                    $('#pagi-dokter').html(res);
+                }
+            })
+        })
     });
-
-
-        function Dokter1() {
-            document.getElementById("dokter-1").style.display = "block";
-            document.getElementById("dokter-2").style.display = "none";
-        }
-
-        function Dokter2() {
-            document.getElementById("dokter-2").style.display = "block";
-            document.getElementById("dokter-1").style.display = "none";
-        }
+        // function Dokter1() {
+        //     document.getElementById("dokter-1").style.display = "block";
+        //     document.getElementById("dokter-2").style.display = "none";
+        // }
+        //
+        // function Dokter2() {
+        //     document.getElementById("dokter-2").style.display = "block";
+        //     document.getElementById("dokter-1").style.display = "none";
+        // }
 </script>

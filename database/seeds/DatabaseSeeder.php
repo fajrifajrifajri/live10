@@ -22,21 +22,24 @@ class DatabaseSeeder extends Seeder
             'tipe_dokter' => "1",
             'jadwalawal' => "2019-03-04",
             'jadwalakhir' => "2019-03-05",
-            'specialist' => "Jantung"
+            'specialist' => "Jantung",
+            'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Sultan Hamid",
             'tipe_dokter' => "2",
             'jadwalawal' => "2019-03-04",
             'jadwalakhir' => "2019-03-05",
-            'specialist' => "Hati"
+            'specialist' => "Hati",
+            'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Susanti",
             'tipe_dokter' => "1",
             'jadwalawal' => "2019-03-04",
             'jadwalakhir' => "2019-03-05",
-            'specialist' => "Anak"
+            'specialist' => "Anak",
+            'gambardokter'=>"asd.jpg"
         ]);
         DB::table('specialist_dokter')->insert([
             'specialist'=>"Jantung"

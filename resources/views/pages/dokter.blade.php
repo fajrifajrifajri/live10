@@ -16,8 +16,8 @@
                         </button>
                     @endforeach
                 </div>
-                <div id="dokter-1" class="col-lg-9">
-                    <div class="row">
+                <div class="col-lg-9">
+                    <div class="row" id="pagi-dokter">
                         @foreach($datadokter as $dokter)
                             <div class="col-lg-4">
                                 <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
