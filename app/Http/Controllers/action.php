@@ -38,7 +38,7 @@ class action extends Controller
             foreach ($data as $pagination) {
                 return "
                 <div class=\"col-lg-4\">
-                    <img src=\"http://localhost:8000/img/Female doctor.jpg \" class=\"rounded-circle dokter-img\" alt=\"dokter\">
+                    <img src=\"/img/Female doctor.jpg \" class=\"rounded-circle dokter-img\" alt=\"dokter\">
                     <p> $pagination[nama] </p>
                 </div>
             ";
