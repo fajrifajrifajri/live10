@@ -1,6 +1,7 @@
 <script src={{ asset('js/jquery.min.js') }}></script>
 <script src={{ asset('js/bootstrap.js') }}></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
 <script>
     $(document).ready(()=>{
         let base_url = `http://localhost:8000/`;
@@ -85,13 +86,21 @@
                         }
                     },
                     error: xhr =>{
-                        alert('Password Salah');
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'Username atau password yang dimasukkan salah!'
+                        })
                         // console.log(xhr);
                         console.log(xhr.responseJSON.message);
                     }
                 })
             }else{
-                alert('field tidak boleh kosong')
+                Swal.fire({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'Tolong isi semua form terlebih dahulu!'
+                })
             }
         })
     });
@@ -106,5 +115,4 @@
             document.getElementById("dokter-2").style.display = "block";
             document.getElementById("dokter-1").style.display = "none";
         }
-
 </script>
