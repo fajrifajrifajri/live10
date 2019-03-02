@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTipeDokterTable extends Migration
+class CreateSpecialistDokterTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateTipeDokterTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipe_dokter', function (Blueprint $table) {
+        Schema::create('specialist_dokter', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipe_dokter');
+            $table->string('specialist');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateTipeDokterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipe_dokter');
+        Schema::dropIfExists('specialist_dokter');
     }
 }

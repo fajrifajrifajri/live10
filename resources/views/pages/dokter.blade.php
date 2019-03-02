@@ -10,27 +10,11 @@
             <h1 class="text-center">DOKTER</h1>
             <div class="row">
                 <div class="col-lg-3">
-                    <button type="button" class="btn btn-light btn-lg btn-block" onclick="Dokter1()">
-                        Anak <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-light btn-lg btn-block" onclick="Dokter2()">
-                        Anestasi <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-light btn-lg btn-block">
-                        Gigi <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-light btn-lg btn-block">
-                        Jantung <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-light btn-lg btn-block">
-                        Klinik Umum <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-light btn-lg btn-block">
-                        Mata <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-light btn-lg btn-block">
-                        Saraf <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
-                    </button>
+                    @foreach($dataspecialist as $specialist)
+                        <button type="button" class="btn btn-light btn-lg btn-block btn-dokter" data-dokter="{{$specialist['id']}}">
+                            {{$specialist['specialist']}} <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
+                        </button>
+                    @endforeach
                 </div>
                 <div id="dokter-1" class="col-lg-9">
                     <div class="row">

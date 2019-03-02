@@ -12,7 +12,7 @@ class auth extends Controller
         $user->name = $r->username;
         $user->password = bcrypt($r->password);
         $user->save();
-        return "";
+        return null;
     }
     function login(Request $r){
         $user = new admin();
@@ -20,7 +20,7 @@ class auth extends Controller
         $check = \Hash::check($r->password,optional($data->password));
         if($check){
             \Session::put('user',$r->username);
-            return "";
+            return null;
         }else{
             return "Password Salah";
         }

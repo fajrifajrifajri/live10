@@ -22,21 +22,30 @@ class DatabaseSeeder extends Seeder
             'tipe_dokter' => "1",
             'jadwalawal' => "2019-03-04",
             'jadwalakhir' => "2019-03-05",
-            'keahlian' => "Specialist Jantung"
+            'specialist' => "Jantung"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Sultan Hamid",
             'tipe_dokter' => "2",
             'jadwalawal' => "2019-03-04",
             'jadwalakhir' => "2019-03-05",
-            'keahlian' => "Specialist Hati"
+            'specialist' => "Hati"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Susanti",
             'tipe_dokter' => "1",
             'jadwalawal' => "2019-03-04",
             'jadwalakhir' => "2019-03-05",
-            'keahlian' => "Specialist Anak"
+            'specialist' => "Anak"
+        ]);
+        DB::table('specialist_dokter')->insert([
+            'specialist'=>"Jantung"
+        ]);
+        DB::table('specialist_dokter')->insert([
+            'specialist'=>"Hati"
+        ]);
+        DB::table('specialist_dokter')->insert([
+            'specialist'=>"Anak"
         ]);
 //        foreach (range(1,50) as $index){
 //            DB::table('dokter')->insert([

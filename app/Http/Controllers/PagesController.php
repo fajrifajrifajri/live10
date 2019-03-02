@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\dokter;
+use App\specialist;
 
 class PagesController extends Controller
 {
@@ -14,12 +15,17 @@ class PagesController extends Controller
         return view('pages.jadwal');
     }
     public function getDokter(){
-        return view('pages.dokter');
+        $dokter = new dokter();
+        $specialist = new specialist();
+        return view('pages.dokter',[
+            "datadokter"=>$dokter::all(),
+            "dataspecialist"=>$specialist::all()
+        ]);
     }
     public function getBuatjanji(){
         $dokter = new dokter();
         return view('pages.buat-janji',[
-            "data"=>$dokter::all()
+            "datadokter"=>$dokter::all(),
         ]);
     }
     public function getAmbilnomor(){

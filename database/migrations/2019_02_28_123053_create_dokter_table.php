@@ -19,7 +19,7 @@ class CreateDokterTable extends Migration
             $table->integer('tipe_dokter');
             $table->date('jadwalawal');
             $table->date('jadwalakhir');
-            $table->string('keahlian');
+            $table->string('specialist');
             $table->timestamps();
         });
     }
