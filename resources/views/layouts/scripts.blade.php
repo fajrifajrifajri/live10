@@ -4,7 +4,7 @@
 <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
 <script>
     $(document).ready(()=>{
-        let base_url = `http://localhost:8000/`;
+        let base_url = `/`;
         $('.owl-carousel').owlCarousel({
             loop:true,
             autoplay:true,
