@@ -24,30 +24,7 @@
                                 <p>{{$dokter['nama']}}</p>
                             </div>
                         @endforeach
-
-                        {{--<div class="col-lg-4">--}}
-                            {{--<img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">--}}
-                            {{--<p>dr. Lia Damayanti, Sp.PA</p>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-lg-4">--}}
-                            {{--<img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">--}}
-                            {{--<p>dr. Antonius Hocky Pudjiadi, Sp.A(K)</p>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-lg-4">--}}
-                            {{--<img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">--}}
-                            {{--<p>dr. Tessa Miranda Atmaja, Sp.BP-RE</p>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-lg-4">--}}
-                            {{--<img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">--}}
-                            {{--<p>dr. Lia Damayanti, Sp.PA</p>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-lg-4">--}}
-                            {{--<img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">--}}
-                            {{--<p>dr. Antonius Hocky Pudjiadi, Sp.A(K)</p>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                    </div>
                 </div>
             </div>
         </div>
