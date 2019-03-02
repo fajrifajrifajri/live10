@@ -9,37 +9,76 @@
         <div class="container">
             <h1>Buat Janji Dokter</h1>
             <p>
-                Untuk booking jadwal konsultasi dengan dokter pilihan, silahkan<br> isi formulir di bawah ini.
-                Rumah Sakit Borobudur akan menghubungi<br> Anda apabila jadwal telah terkonfirmasi.
+                Pilih dokter sesuai jadwal kerja.
             </p>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <form  method="post" id="fbuatjanji">
                         {{csrf_field()}}
                         <div class="form-group">
-                            <input type="text" class="form-control" name="notelp" id="notelp" placeholder="Nomor telpon anda">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email anda">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="nama_pasien" id="nama_pasien" placeholder="Nama lengkap pasien">
-                        </div>
-                        <div class="form-group">
-                            <input type="date" class="form-control" name="tgllahir_pasien" id="tgllahir_pasien" placeholder="Tanggal lahir pasien">
-                        </div>
-                        <div class="form-group">
                             <select class="form-control" name="nama_dokter" id="nama_dokter" title="Nama dokter spesialis">
-                                <option value="">- Pilih Dokter -</option>
+                                <option value="">- Spesialis Anak -</option>
                                 @foreach($data as $dokter)
                                     <option value="{{$dokter['id']}}">{{$dokter['nama']}} - {{$dokter['keahlian']}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
-                            <input type="date" class="form-control" name="tgl_bertemu" id="tgl_bertemu" placeholder="Tanggal bertemu">
-                        </div>
-                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="SELANJUTNYA">
+                        <table class="table table-striped text-center">
+                            <thead class="thead-light">
+                                <tr>
+                                <th scope="col">*</th>
+                                <th scope="col">Senin</th>
+                                <th scope="col">Selasa</th>
+                                <th scope="col">Rabu</th>
+                                <th scope="col">Kamis</th>
+                                <th scope="col">Jumat</th>
+                                <th scope="col">Sabtu</th>
+                                <th scope="col">Minggu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row"> 08:00 - 11:30 </th>
+                                <td><a href="#">Dr. Sukamoldjo</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                </tr>
+                                <tr>
+                                <th scope="row"> 12:30 - 15:00 </th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><a href="#">Dr. M. Firman</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                </tr>
+                                <tr>
+                                <th scope="row"> 15:30 - 18:00 </th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                </tr>
+                                <tr>
+                                <th scope="row"> 19:30 - 20:00 </th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </form>
                 </div>
             </div>
