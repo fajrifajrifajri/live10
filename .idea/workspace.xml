@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69a4fbde-f660-4638-b5d4-6f9726d6be51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/action.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dokter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dokter.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -352,12 +350,12 @@
       <workItem from="1551468222738" duration="46000" />
       <workItem from="1551509013678" duration="105000" />
       <workItem from="1551515853594" duration="10794000" />
-      <workItem from="1551537425900" duration="213000" />
+      <workItem from="1551537425900" duration="813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32377000" />
+    <option name="totallyTimeSpent" value="32977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,7 +384,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26350245" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4091653" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
