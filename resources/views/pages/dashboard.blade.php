@@ -16,7 +16,7 @@
         <div class="col-lg-2">
             <div id="profile">
                 <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
-                <p>Mas Dimas</p>
+                <p>{{Session::get('user')}}</p>
             </div>
             <div id="menu">
                 <a href="">DASHBOARD</a>
