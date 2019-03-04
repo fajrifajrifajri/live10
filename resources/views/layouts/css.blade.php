@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/index.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pages/index-r.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/jadwal.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dokter.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/janji.css') }}">

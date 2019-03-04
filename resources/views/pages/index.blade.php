@@ -37,7 +37,7 @@
 
     <section id="sponsors">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center text-center">
                 <div class="col-lg-6">
                     <img src="{{ asset('img/Bpjs.jpg') }}" alt="bpjs">
                 </div>

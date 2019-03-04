@@ -35,10 +35,14 @@
         </div>
     </div>
 </nav>
-<nav id="navbar-bottom" class="navbar navbar-expand-lg">
+<nav id="navbar-bottom" class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="/"><img src="{{ asset('img/Borobudur logo full.png') }}" class="navbar-img" alt="logo"/></a>
             
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li>

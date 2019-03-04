@@ -1,0 +1,49 @@
+@media (max-width: 576px) { /* XS */
+    /******************* NAVBAR *******************/
+    #navbar-top div div div ul li {
+        margin: 0;
+    }
+    .navbar-img {
+        max-width: 80%;
+    }
+    #navbar-bottom div div ul li:nth-last-child(1) {
+        margin-left: 0;
+    }
+    #paralleogram {
+        display: none;
+    }
+    #navbar-bottom div div ul li:nth-last-child(1) a {
+        color: #e38080 !important;
+    }m
+    /******************* ABOUT *******************/
+    #about {
+        padding-bottom: 4em;
+    }
+    #about div div h2 {
+        padding: 2em 1em 2em 1em;
+        margin-bottom: 0;
+    }
+    /******************* LINE *******************/    
+    #line h1 {
+        display: none;
+    }
+    /******************* REVIEW *******************/
+    #review p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #review p:nth-last-child(1) {
+        font-weight: 700;
+    }
+    /******************* FOOTER *******************/
+    #footer-top div div div:nth-child(1) {
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    #footer-top div div div:nth-child(2) {
+        padding: 0;
+    }
+    #footer-top div div div:nth-child(2) ul {
+        padding-left: 0;
+    }
+}
