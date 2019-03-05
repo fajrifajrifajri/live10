@@ -4,7 +4,9 @@
 <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
 <script>
     $(document).ready(()=>{
-        let base_url = `/`;
+        let base_url = window.location.origin
+        let host = window.location.host
+
         $('.owl-carousel').owlCarousel({
             loop:true,
             autoplay:true,
