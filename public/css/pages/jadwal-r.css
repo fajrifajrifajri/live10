@@ -1,0 +1,16 @@
+@media (max-width: 576px) { /* XS */
+    /******************* JADWAL *******************/
+    #jadwal {
+        padding: 0;
+        padding-top: 3em;
+    }
+    #jadwal div h1 {
+        margin-bottom: 2em;
+    }
+    #banner {
+        margin-bottom: 2em;
+    }
+    #jadwal * .btn-light {
+        width: 100%;
+    }
+}

@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col-lg-10">
-            <table class="table table-striped text-center">
+            <table class="table table-striped text-center table-responsive">
                 <thead>
                     <tr>
                     <th scope="col">No. Telpon</th>
@@ -68,7 +68,7 @@
     <footer id="footer-bottom">
         <div class="container">
             <div>Copyright 2019. All rights reserved | Rumah Sakit Borobudur</div>
-            <div class="float-right">Designed by <span>Jasbuweb.com</span></div>
+            <div class="float-lg-right">Designed by <span>Jasbuweb.com</span></div>
         </div>
     </footer>
     @include('layouts.scripts')

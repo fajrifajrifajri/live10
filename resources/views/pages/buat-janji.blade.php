@@ -23,7 +23,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <table class="table table-striped text-center">
+                        <table class="table table-striped text-center table-responsive">
                             <thead class="thead-light">
                                 <tr>
                                 <th scope="col">*</th>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Jadwal Harian | {{ config ('app.name', 'RS Borobudur')}}
+    Jadwal Mingguan | {{ config ('app.name', 'RS Borobudur')}}
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
         <div class="container">
             <h1 class="text-center">JADWAL</h1>
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 order-2 order-lg-1">
                     <div id="banner">
                         <h4>RS BOROBUDUR</h4>
                         <p>Jl. Ampera No.37 Pontianak</p>
@@ -20,7 +20,7 @@
                         <p>Web : rs-borobudur.com</p>
                     </div>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-9 order-1 order-lg-2">
                     <h4>Find your doctor</h4>
                     <div class="dropdown">
                         <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,7 +32,7 @@
                             <a class="dropdown-item" href="#">Anak</a>
                         </div>
                     </div>
-                    <table class="table table-striped text-center">
+                    <table class="table table-striped table-responsive text-center">
                         <thead>
                             <tr>
                             <th scope="col">Nama Dokter</th>

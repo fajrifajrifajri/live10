@@ -6,8 +6,13 @@
 <link rel="stylesheet" href="{{ asset('css/pages/index.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/index-r.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/jadwal.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pages/jadwal-r.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dokter.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pages/dokter-r.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/janji.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pages/janji-r.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/nomor.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pages/nomor-r.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/admin.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dashboard.css') }}">
+<link rel="stylesheet" href="{{ asset('css/pages/dashboard-r.css') }}">
