@@ -16,3 +16,5 @@
 <link rel="stylesheet" href="{{ asset('css/pages/admin.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dashboard.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dashboard-r.css') }}">
+<link rel="stylesheet" href="{{url('//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')}}">
+{{--<link rel="stylesheet" href="{{asset('css/select2.js')}}">--}}

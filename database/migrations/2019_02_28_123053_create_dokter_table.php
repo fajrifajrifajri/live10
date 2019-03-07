@@ -17,8 +17,9 @@ class CreateDokterTable extends Migration
             $table->increments('id');
             $table->string('nama')->nullable();
             $table->integer('tipe_dokter');
-            $table->date('jadwalawal');
-            $table->date('jadwalakhir');
+            $table->string('hari');
+            $table->time('jamawal');
+            $table->time('jamakhir');
             $table->string('specialist');
             $table->string('gambardokter');
             $table->timestamps();

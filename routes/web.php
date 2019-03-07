@@ -38,5 +38,9 @@ Route::post('/dokter-pagination',"action@pagi_dokter");
 Route::get('/logout',"action@logout");
 Route::middleware('usercheck')->group(function(){
     Route::get('/admin/dashboard', 'PagesController@getDashboard');
-
+    Route::get('/table/janji_pasien',"jsontable@janji_pasien");
 });
+//external securing
+//Route::any('/css/*/*',function(){
+//    return redirect()->back();
+//});
