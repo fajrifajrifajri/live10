@@ -32,7 +32,11 @@ class PagesController extends Controller
         return view('pages.ambil-nomor');
     }
     public function getAdmin(){
-        return view('pages.admin');
+        if(\Session::get('user')){
+            return redirect('/admin/dashboard');
+        }else {
+            return view('pages.admin');
+        }
     }
     public function getDashboard(){
         return view('pages.dashboard');
