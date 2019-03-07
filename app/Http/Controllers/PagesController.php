@@ -12,7 +12,9 @@ class PagesController extends Controller
         return view('pages.index');
     }
     public function getJadwal(){
-        return view('pages.jadwal');
+        return view('pages.jadwal',[
+            "dokter"=>dokter::all()
+        ]);
     }
     public function getDokter(){
         $dokter = new dokter();
