@@ -37,5 +37,6 @@ Route::post('/action-buatjanji',"action@buatjanji");
 Route::post('/dokter-pagination',"action@pagi_dokter");
 Route::get('/logout',"action@logout");
 Route::middleware('usercheck')->group(function(){
-    Route::get('/dashboard', 'PagesController@getDashboard');
+    Route::get('/admin/dashboard', 'PagesController@getDashboard');
+
 });

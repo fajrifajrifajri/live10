@@ -4,7 +4,7 @@
 <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
 <script>
     $(document).ready(()=>{
-        let base_url = window.location.origin
+        let base_url = window.location.origin+"/"
         let host = window.location.host
 
         $('.owl-carousel').owlCarousel({
@@ -87,7 +87,7 @@
                         if(res){
                             alert(res)
                         }else{
-                            location.href = '/dashboard'
+                            location.href = `${base_url}admin/dashboard`
                         }
                     },
                     error: xhr =>{
