@@ -1,4 +1,8 @@
 $(document).ready(() => {
+    function numberWithCommas(n) {
+        var parts = n.toString().split(".");
+        return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+    }
     let base_url = window.location.origin+"/"
     let base_admin = window.location.origin+"/admin/"
     let host = window.location.host
@@ -14,14 +18,14 @@ $(document).ready(() => {
                 "data": "id",
                 "sClass":"text-center",
             },
-            {
-                "data": "kode-janji",
-                "sClass":"text-center",
-            },
-            {
-                "data": "kode-antrian",
-                "sClass":"text-center",
-            },
+            // {
+            //     "data": "kode-janji",
+            //     "sClass":"text-center",
+            // },
+            // {
+            //     "data": "kode-antrian",
+            //     "sClass":"text-center",
+            // },
             {
                 "data": "notelp",
                 "sClass":"text-center",
@@ -47,9 +51,13 @@ $(document).ready(() => {
             },
             {
                 "data": "nama_dokter",
-                "sClass":"text-center",
-                render: data => {
-                    return `Dr. ${data} `
+                "sClass":"text-center"
+            },
+            {
+                data: "harga",
+                sClass: "text-center",
+                render: data=>{
+                    return `Rp. ${numberWithCommas(data)}`
                 }
             },
             {
@@ -67,7 +75,6 @@ $(document).ready(() => {
             },
             {
                 "data": "id",
-                "width": "150px",
                 "sClass": "text-center",
                 "orderable": false,
                 "mRender": function (data) {

@@ -30,13 +30,14 @@
             <thead>
             <tr>
                 <th scope="col">No</th>
-                <th scope="col">Kode Janji</th>
-                <th scope="col">Kode Antrian</th>
+                {{--<th scope="col">Kode Janji</th>--}}
+                {{--<th scope="col">Kode Antrian</th>--}}
                 <th scope="col">No Telp</th>
                 <th scope="col">Email</th>
                 <th scope="col">Nama Pasien</th>
                 <th scope="col">Tanggal Lahir Pasien</th>
                 <th scope="col">Nama Dokter</th>
+                <th scope="col">Harga</th>
                 <th scope="col">Tanggal Bertemu</th>
                 <th scope="col">&nbsp;</th>
             </tr>
