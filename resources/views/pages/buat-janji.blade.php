@@ -39,7 +39,7 @@
                             <tbody>
                                 <tr>
                                 <th scope="row"> 08:00 - 11:30 </th>
-                                <td><a href="{{ route('janji2') }}">Dr. Sukamoldjo</a></td>
+                                <td><a href="{{ url('/buat-janji-form/Sukamoldjo') }}">Dr. Sukamoldjo</a></td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
@@ -52,7 +52,7 @@
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
-                                <td><a href="{{ route('janji2') }}">Dr. M. Firman</a></td>
+                                <td><a href="{{ url('/buat-janji-form/M. Firman') }}">Dr. M. Firman</a></td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
