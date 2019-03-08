@@ -29,15 +29,12 @@
                             <input type="date" class="form-control" name="tgllahir_pasien" id="tgllahir_pasien" placeholder="Tanggal lahir pasien">
                         </div>
                         <div class="form-group">
-                            <select class="form-control" name="nama_dokter" id="nama_dokter" title="Nama dokter spesialis">
-                                <option value="">- Pilih Dokter -</option>
-                                @foreach($data as $dokter)
-                                    <option value="{{$dokter['id']}}">{{$dokter['nama']}} - {{$dokter['keahlian']}}</option>
-                                @endforeach 
-                            </select>
+                            <input type="text" name="nama_dokter" placeholder="" value="Dr. {{$dokter}}" readonly class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="date" class="form-control" name="tgl_bertemu" id="tgl_bertemu" placeholder="Tanggal bertemu">
+                            <input type="text" placeholder="" value="{{$tgl}}" class="form-control" readonly>
+                            <input type="hidden" name="tgl_bertemu" value="{{$tglhidden}}">
+                            {{--<input type="date" class="form-control" name="tgl_bertemu" id="tgl_bertemu" placeholder="Tanggal bertemu">--}}
                         </div>
                         <input type="submit" class="btn btn-primary btn-lg btn-block" value="SELANJUTNYA">
                     </form>

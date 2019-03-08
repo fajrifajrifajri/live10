@@ -27,7 +27,7 @@ Route::get('/buat-janji', [
     'uses' => 'PagesController@getBuatjanji',
     'as' => 'janji'
 ]);
-Route::get('/buat-janji-form', [ /* <----- Ubah jadi post! Route::post /buat-janji */
+Route::get('/buat-janji-form/{dokter}', [
     'uses' => 'PagesController@getBuatjanjiform',
     'as' => 'janji2'
 ]);

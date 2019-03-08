@@ -30,11 +30,17 @@ class PagesController extends Controller
                 "data"=>$dokter::all(),
         ]);
     }
-    public function getBuatjanjiform(){
+    public function getBuatjanjiform($dokterr){
         $dokter = new dokter();
-        return view('pages.buat-janji2', [
-            "data"=>$dokter::all(),
-        ]);
+        if($dokterr) {
+            return view('pages.buat-janji2', [
+                "dokter" => $dokterr,
+                "tgl" => date('D, d M Y'),
+                "tglhidden"=> date('Y-m-d')
+            ]);
+        }else{
+            return redirect()->back();
+        }
     }
     public function getAmbilnomor(){
         return view('pages.ambil-nomor');
