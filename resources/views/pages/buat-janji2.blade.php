@@ -33,7 +33,7 @@
                                 <option value="">- Pilih Dokter -</option>
                                 @foreach($data as $dokter)
                                     <option value="{{$dokter['id']}}">{{$dokter['nama']}} - {{$dokter['keahlian']}}</option>
-                                @endforeach
+                                @endforeach 
                             </select>
                         </div>
                         <div class="form-group">

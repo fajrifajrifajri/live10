@@ -30,6 +30,12 @@ class PagesController extends Controller
                 "data"=>$dokter::all(),
         ]);
     }
+    public function getBuatjanjiform(){
+        $dokter = new dokter();
+        return view('pages.buat-janji2', [
+            "data"=>$dokter::all(),
+        ]);
+    }
     public function getAmbilnomor(){
         return view('pages.ambil-nomor');
     }

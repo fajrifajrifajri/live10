@@ -23,7 +23,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <table class="table table-striped text-center table-responsive">
+                        <table class="table table-striped text-center table-responsive-lg">
                             <thead class="thead-light">
                                 <tr>
                                 <th scope="col">*</th>
@@ -39,7 +39,7 @@
                             <tbody>
                                 <tr>
                                 <th scope="row"> 08:00 - 11:30 </th>
-                                <td><a href="#">Dr. Sukamoldjo</a></td>
+                                <td><a href="{{ route('janji2') }}">Dr. Sukamoldjo</a></td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
@@ -52,7 +52,7 @@
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
-                                <td><a href="#">Dr. M. Firman</a></td>
+                                <td><a href="{{ route('janji2') }}">Dr. M. Firman</a></td>
                                 <td>-</td>
                                 <td>-</td>
                                 <td>-</td>
