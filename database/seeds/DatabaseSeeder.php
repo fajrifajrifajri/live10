@@ -108,13 +108,14 @@ class DatabaseSeeder extends Seeder
             'specialist'=>"Anak"
         ]);
         DB::table('janji_pasien')->insert([
-            "kode-janji"=>"Janji-0001",
-            "kode-antrian"=>"0001",
+//            "kode-janji"=>"Janji-0001",
+//            "kode-antrian"=>"0001",
             "notelp"=>"0812xxxxxxx",
             "email"=>"ericanthonywu89@gmail.com",
             "nama_pasien"=>"Jono",
             "tgllahir_pasien"=>"2001-09-08",
             "nama_dokter"=>"Jono Wongso",
+            "harga"=>"10000",
             "tgl_bertemu"=>"2019-10-08"
         ]);
 //        foreach (range(1,50) as $index){

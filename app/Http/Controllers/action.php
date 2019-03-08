@@ -16,9 +16,10 @@ class action extends Controller
         $janji->nama_pasien = $r->nama_pasien;
         $janji->tgllahir_pasien = $r->tgllahir_pasien;
         $janji->nama_dokter = $r->nama_dokter;
+        $janji->harga = $r->harga;
         $janji->tgl_bertemu = $r->tgl_bertemu;
         $janji->save();
-        return "";
+        return "a";
     }
     function logout(){
         \Session::forget('user');

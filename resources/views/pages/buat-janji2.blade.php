@@ -29,6 +29,13 @@
                             <input type="date" class="form-control" name="tgllahir_pasien" id="tgllahir_pasien" placeholder="Tanggal lahir pasien">
                         </div>
                         <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-text">Rp.</div>
+                                <input type="text" class="form-control number ribuan" data-id-selector="harga" placeholder="Masukkan harga">
+                            </div>
+                            <input type="hidden" name="harga" id="harga">
+                        </div>
+                        <div class="form-group">
                             <input type="text" name="nama_dokter" placeholder="" value="Dr. {{$dokter}}" readonly class="form-control">
                         </div>
                         <div class="form-group">
