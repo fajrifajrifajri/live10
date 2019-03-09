@@ -6,6 +6,7 @@ $(document).ready(() => {
     let base_url = window.location.origin+"/"
     let base_admin = window.location.origin+"/admin/"
     let host = window.location.host
+
     let monthNames = ["", "Januari", "Februari", "Maret", "April", "Mei", "Juni",
         "Juli", "Agustus", "September", "Oktober", "November", "Desember" ];
 
