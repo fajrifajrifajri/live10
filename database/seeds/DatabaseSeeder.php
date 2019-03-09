@@ -118,6 +118,16 @@ class DatabaseSeeder extends Seeder
             "harga"=>"10000",
             "tgl_bertemu"=>"2019-10-08"
         ]);
+        DB::table('jadwal_dokter')->insert([
+            "hari"=>"Senin",
+            "jam"=>"2230",
+            "nama_dokter"=>"Sugiono"
+        ]);
+        DB::table('list_dokter')->insert([
+            "nama_dokter"=>"Senin",
+            "spesialis"=>"2230",
+            "foto"=> $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
 //        foreach (range(1,50) as $index){
 //            DB::table('dokter')->insert([
 //                'name'=> $faker->name,

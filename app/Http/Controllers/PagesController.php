@@ -30,6 +30,15 @@ class PagesController extends Controller
                 "data"=>$dokter::all(),
         ]);
     }
+    public function getDashboardJanji(){
+        return view('pages.dashboard.dashboard-janji');
+    }
+    public function getDashboardJadwal(){
+        return view('pages.dashboard.dashboard-jadwal');
+    }
+    public function getDashboardDokter(){
+        return view('pages.dashboard.dashboard-dokter');
+    }
     public function getBuatjanjiform($dokterr){
         $dokter = new dokter();
         if($dokterr) {
@@ -53,6 +62,6 @@ class PagesController extends Controller
         }
     }
     public function getDashboard(){
-        return view('pages.dashboard');
+        return view('pages.dashboard.dashboard');
     }
 }

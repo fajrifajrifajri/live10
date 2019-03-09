@@ -41,8 +41,25 @@ Route::post('/action-buatjanji',"action@buatjanji");
 Route::post('/dokter-pagination',"action@pagi_dokter");
 Route::get('/logout',"action@logout");
 Route::middleware('usercheck')->group(function(){
-    Route::get('/admin/dashboard', 'PagesController@getDashboard');
+    Route::get('/admin/dashboard', [
+        'uses' => 'PagesController@getDashboard',
+        'as' => 'dashboard'
+        ]);
+    Route::get('/admin/janji', [
+        'uses' => 'PagesController@getDashboardJanji',
+        'as' => 'dashboard-janji'
+        ]);
+    Route::get('/admin/jadwal', [
+        'uses' => 'PagesController@getDashboardJadwal',
+        'as' => 'dashboard-jadwal'
+        ]);
+    Route::get('/admin/dokter', [
+        'uses' => 'PagesController@getDashboardDokter',
+        'as' => 'dashboard-dokter'
+        ]);
     Route::get('/table/janji_pasien',"jsontable@janji_pasien");
+    Route::get('/table/jadwal_dokter',"jsontable@jadwal_dokter");
+    Route::get('/table/list_dokter',"jsontable@list_dokter");
 });
 //external securing
 //Route::any('/css/*/*',function(){

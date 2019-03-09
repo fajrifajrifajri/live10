@@ -18,15 +18,11 @@
             <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
             <p>{{Session::get('user')}}</p>
         </div>
-        <div id="menu">
-            <a href="">DASHBOARD</a>
-            <a href="">JANJI DOKTER</a>
-            <a href="{{url('/logout')}}">LOGOUT</a>
-        </div>
+        @include('pages.dashboard.menu')
     </div>
-    <div class="col-lg-10 table-responsive">
+    <div class="col-lg-10 p-4">
         <div class="col-sm-6"></div>
-        <table class="table table-striped text-center" id="tbljanji">
+        <table class="table table-striped text-center table-responsive" id="tbljanji">
             <thead>
             <tr>
                 <th scope="col">No</th>
@@ -45,12 +41,7 @@
         </table>
     </div>
 </main>
-<footer id="footer-bottom">
-    <div class="container">
-        <div>Copyright 2019. All rights reserved | Rumah Sakit Borobudur</div>
-        <div class="float-lg-right">Designed by <span>Jasbuweb.com</span></div>
-    </div>
-</footer>
+@include('pages.dashboard.footer')
 @include('layouts.scripts')
 </body>
 </html>
