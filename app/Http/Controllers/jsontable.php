@@ -13,8 +13,23 @@ use App\list_dokter;
 class jsontable extends Controller
 {
     function jadwal_dokter_user(){
+        $data = DB::table('dokter')
+            ->select(
+                'nama',
+                'specialist_dokter.specialist as specialist',
+                'hari',
+                'jamawal',
+                'jamakhir'
+            )
+            ->join(
+                'specialist_dokter',
+                'dokter.specialist',
+                "=",
+                "specialist_dokter.id"
+            )
+            ->get();
             return response()->json([
-                "data" => dokter::all()
+                "data" => $data
             ]);
     }
     function janji_pasien(){

@@ -26,50 +26,27 @@
                         <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Specialty
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu" id="a" aria-labelledby="dropdownMenuButton">
+                            <a href="#a" class="dropdown-item filterdokter">All</a>
                             @foreach($specialist as $data)
-                                <a href="#tbljadwaldokter" class="dropdown-item">{{$data['specialist']}}</a>
+                                <a href="#a" class="dropdown-item filterdokter">{{$data['specialist']}}</a>
                             @endforeach
                         </div>
                     </div>
                     <table class="table table-striped table-responsive text-center" id="tbljadwaldokter">
                         <thead>
                             <tr>
-                            <th scope="col">Nama Dokter</th>
-                            <th scope="col">Senin</th>
-                            <th scope="col">Selasa</th>
-                            <th scope="col">Rabu</th>
-                            <th scope="col">Kamis</th>
-                            <th scope="col">Jumat</th>
-                            <th scope="col">Sabtu</th>
-                            <th scope="col">Minggu</th>
+                                <th scope="col">Nama Dokter</th>
+                                <th scope="col">Specialist</th>
+                                <th scope="col">Senin</th>
+                                <th scope="col">Selasa</th>
+                                <th scope="col">Rabu</th>
+                                <th scope="col">Kamis</th>
+                                <th scope="col">Jumat</th>
+                                <th scope="col">Sabtu</th>
+                                <th scope="col">Minggu</th>
                             </tr>
                         </thead>
-                        {{--<tbody>--}}
-                            {{--<tr>--}}
-                                {{--<th scope="row">dr. Sukmawati</th>--}}
-                                {{--<td>08.00-10.00</td>--}}
-                                {{--<td>-</td>--}}
-                                {{--<td>08.00-10.00</td>--}}
-                                {{--<td>08.00-10.00</td>--}}
-                                {{--<td>-</td>--}}
-                                {{--<td>13.00-15.30</td>--}}
-                                {{--<td>-</td>--}}
-                            {{--</tr>--}}
-                            {{--<tr>--}}
-                                {{--<th scope="row">dr. Sukamoljo</th>--}}
-                                {{--<td>08.00-10.00</td>--}}
-                                {{--<td>-</td>--}}
-                                {{--<td>08.00-10.00</td>--}}
-                                {{--<td>08.00-10.00</td>--}}
-                                {{--<td>-</td>--}}
-                                {{--<td>13.00-15.30</td>--}}
-                                {{--<td>-</td>--}}
-                            {{--</tr>--}}
-                            {{--<tr>--}}
-                                {{----}}
-                            {{--</tr>--}}
-                        {{--</tbody>--}}
                     </table>
                 </div>
             </div>

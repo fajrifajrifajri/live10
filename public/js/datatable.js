@@ -12,12 +12,17 @@ $(document).ready(() => {
 
     let tbljadwaldokter = $('#tbljadwaldokter').DataTable( {
         // dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>", // horizobtal scrollable datatable
+        dom: 'lrtip',
         responsive: true,
         ajax: `${base_url}table/jadwal_dokter`,
         columns: [
             {
                 "data": "nama",
                 "sClass":"text-center",
+            },
+            {
+                data: "specialist",
+                sclass: "text-center"
             },
             {
                 "data": "hari",
@@ -144,6 +149,14 @@ $(document).ready(() => {
         // set the initial value
         "pageLength": 10
     } );
+    
+    $('.filterdokter').click(function (e) {
+        if($(this).html() === "All"){
+            tbljadwaldokter.ajax.reload();
+        }else {
+            tbljadwaldokter.search($(this).html()).draw();
+        }
+    })
 
     let tbljanji = $('#tbljanji').DataTable( {
         // dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>", // horizobtal scrollable datatable
