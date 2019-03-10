@@ -27,12 +27,12 @@
                             Specialty
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Gigi</a>
-                            <a class="dropdown-item" href="#">Umum</a>
-                            <a class="dropdown-item" href="#">Anak</a>
+                            @foreach($specialist as $data)
+                                <a href="#tbljadwaldokter" class="dropdown-item">{{$data['specialist']}}</a>
+                            @endforeach
                         </div>
                     </div>
-                    <table class="table table-striped table-responsive text-center">
+                    <table class="table table-striped table-responsive text-center" id="tbljadwaldokter">
                         <thead>
                             <tr>
                             <th scope="col">Nama Dokter</th>
@@ -45,38 +45,20 @@
                             <th scope="col">Minggu</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row">dr. Sukmawati</th>
-                            <td>08.00-10.00</td>
-                            <td>-</td>
-                            <td>08.00-10.00</td>
-                            <td>08.00-10.00</td>
-                            <td>-</td>
-                            <td>13.00-15.30</td>
-                            <td>-</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">dr. Sukamoljo</th>
-                            <td>08.00-10.00</td>
-                            <td>-</td>
-                            <td>08.00-10.00</td>
-                            <td>08.00-10.00</td>
-                            <td>-</td>
-                            <td>13.00-15.30</td>
-                            <td>-</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">dr. Kevin Situmorang</th>
-                            <td>08.00-10.00</td>
-                            <td>-</td>
-                            <td>08.00-10.00</td>
-                            <td>08.00-10.00</td>
-                            <td>-</td>
-                            <td>13.00-15.30</td>
-                            <td>-</td>
-                            </tr>
-                        </tbody>
+                        {{--<tbody>--}}
+                            {{--@foreach($dokter as $datadokter)--}}
+                                {{--<tr>--}}
+                                    {{--<th scope="row">dr. {{$datadokter['nama']}}</th>--}}
+                                    {{--<td>08.00-10.00</td>--}}
+                                    {{--<td>-</td>--}}
+                                    {{--<td>08.00-10.00</td>--}}
+                                    {{--<td>08.00-10.00</td>--}}
+                                    {{--<td>-</td>--}}
+                                    {{--<td>13.00-15.30</td>--}}
+                                    {{--<td>-</td>--}}
+                                {{--</tr>--}}
+                            {{--@endforeach--}}
+                        {{--</tbody>--}}
                     </table>
                 </div>
             </div>

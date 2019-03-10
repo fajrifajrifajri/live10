@@ -13,7 +13,8 @@ class PagesController extends Controller
     }
     public function getJadwal(){
         return view('pages.jadwal',[
-            "dokter"=>dokter::all()
+            "dokter"=>dokter::all(),
+            "specialist"=>specialist::all()
         ]);
     }
     public function getDokter(){
@@ -40,7 +41,6 @@ class PagesController extends Controller
         return view('pages.dashboard.dashboard-dokter');
     }
     public function getBuatjanjiform($dokterr){
-        $dokter = new dokter();
         if($dokterr) {
             return view('pages.buat-janji2', [
                 "dokter" => $dokterr,

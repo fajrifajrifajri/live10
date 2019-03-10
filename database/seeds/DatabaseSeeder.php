@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Jantung",
+            'specialist' => "1",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Hati",
+            'specialist' => "2",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Anak",
+            'specialist' => "3",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Jantung",
+            'specialist' => "1",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -59,7 +59,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Jantung",
+            'specialist' => "1",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -68,7 +68,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Anak",
+            'specialist' => "3",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -77,7 +77,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Hati",
+            'specialist' => "2",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -86,7 +86,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Hati",
+            'specialist' => "2",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
@@ -95,7 +95,7 @@ class DatabaseSeeder extends Seeder
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "Anak",
+            'specialist' => "3",
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('specialist_dokter')->insert([

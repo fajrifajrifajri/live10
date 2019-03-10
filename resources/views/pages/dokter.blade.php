@@ -20,10 +20,10 @@
                     @endforeach
                 </div>
                 <div class="col-lg-9">
-                    <div class="row" id="pagi-dokter">
+                    <div class="row">
                         @foreach($datadokter as $dokter)
-                            <div class="col-lg-4">
-                                <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
+                            <div class="col-lg-4 dokter dokter{{$dokter['id']}}" >
+                                <img src="{{ asset('img/Female doctor.jpg')}}" class="rounded-circle dokter-img" alt="dokter">
                                 <p>{{$dokter['nama']}}</p>
                             </div>
                         @endforeach

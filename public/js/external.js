@@ -1,45 +1,45 @@
-$(document).ready(()=>{
-    let base_url = window.location.origin+"/"
-    let base_admin = window.location.origin+"/admin/"
-    let host = window.location.host
+$(document).ready(() => {
+    let base_url = window.location.origin + "/";
+    let base_admin = window.location.origin + "/admin/";
+    let host = window.location.host;
 
     // $('#nama_dokter').select2({
     //
     // });
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true,
-        margin:10,
-        dots:false,
-        nav:true,
-        navText : ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
-        responsive:{
-            0:{
-                items:1
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        margin: 10,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:1
+            600: {
+                items: 1
             },
-            1000:{
-                items:1
+            1000: {
+                items: 1
             }
         }
     });
-    $('#fbuatjanji').on('submit', function(e){
+    $('#fbuatjanji').on('submit', function (e) {
         e.preventDefault();
         const data = $(this).serialize();
         // atau new FormData(this) -> tapi ini sebisa mungkin
         // buat ajax gmbr doang karena makan cache gede
         let checkinput = true;
-        $(this).find('input').each((idx,elem)=>{
-            if($(elem).val() === ""){
+        $(this).find('input').each((idx, elem) => {
+            if ($(elem).val() === "") {
                 checkinput = false;
                 //alert(`${$(elem).attr("id")} || ${$(elem).val()}`);
             }
         });
-        if(checkinput) {
+        if (checkinput) {
             $.ajax({
                 type: 'POST',
                 data: data,
@@ -64,32 +64,32 @@ $(document).ready(()=>{
                     // berguna buat design
                 }
             })
-        }else{
+        } else {
             alert('field harus diisi smua');
         }
     });
-    $('#floginadmin').on('submit',e => {
+    $('#floginadmin').on('submit', e => {
         e.preventDefault();
         let data = $('#floginadmin').serialize();
-        if($('#username').val() && $('#password').val()){
+        if ($('#username').val() && $('#password').val()) {
             $.ajax({
-                type:'POST',
+                type: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                url:'/adminlogin',
-                data:data,
-                beforeSend: ()=>{
+                url: '/adminlogin',
+                data: data,
+                beforeSend: () => {
 
                 },
-                success: res =>{
-                    if(res){
+                success: res => {
+                    if (res) {
                         alert(res)
-                    }else{
+                    } else {
                         location.href = `${base_url}admin/dashboard`
                     }
                 },
-                error: xhr =>{
+                error: xhr => {
                     Swal.fire({
                         type: 'error',
                         title: 'Oops...',
@@ -99,28 +99,35 @@ $(document).ready(()=>{
                     console.log(xhr.responseJSON.message);
                 }
             })
-        }else{
+        } else {
             Swal.fire({
                 type: 'error',
                 title: 'Oops...',
                 text: 'Tolong isi semua form terlebih dahulu!'
             })
         }
-    })
+    });
     $('.btn-dokter').on('click', function () {
-        const data = $(this).data('dokter')
-        $.ajax({
-            type:'POST',
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            url:`${base_url}dokter-pagination`,
-            data:{
-                pagination: data
-            },
-            success:res =>{
-                $('#pagi-dokter').html(res);
+        const data = $(this).data('dokter');
+            if (data === "all") {
+                $('.dokter').show(800);
+            } else {
+                $('.dokter').hide(800);
+                $(`.dokter${data}`).show(800);
             }
-        })
+
+        // $.ajax({
+        //     type:'POST',
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //     },
+        //     url:`${base_url}dokter-pagination`,
+        //     data:{
+        //         pagination: data
+        //     },
+        //     success:res =>{
+        //         $('#pagi-dokter').html(res);
+        //     }
+        // })
     })
 });
