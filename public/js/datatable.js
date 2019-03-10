@@ -20,32 +20,95 @@ $(document).ready(() => {
                 "sClass":"text-center",
             },
             {
-                "data": "senin",
+                "data": "hari",
                 "sClass":"text-center",
+                render: (t,e,a) =>{
+                    if(t == 1){
+                        const jam_awal = a.jamawal.split(":")
+                        const jam_akhir = a.jamakhir.split(":")
+                        return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                    }else{
+                        return `-`
+                    }
+                }
             },
             {
-                "data": "selasa",
+                "data": "hari",
                 "sClass":"text-center",
+                render: (t,e,a) =>{
+                    if(t == 2){
+                        const jam_awal = a.jamawal.split(":")
+                        const jam_akhir = a.jamakhir.split(":")
+                        return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                    }else{
+                        return `-`
+                    }
+                }
             },
             {
-                "data": "rabu",
+                "data": "hari",
                 "sClass":"text-center",
+                render: (t,e,a) =>{
+                    if(t == 3){
+                        const jam_awal = a.jamawal.split(":")
+                        const jam_akhir = a.jamakhir.split(":")
+                        return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                    }else{
+                        return `-`
+                    }
+                }
             },
             {
-                "data": "kamis",
+                "data": "hari",
                 "sClass":"text-center",
+                render: (t,e,a) =>{
+                    if(t == 4){
+                        const jam_awal = a.jamawal.split(":")
+                        const jam_akhir = a.jamakhir.split(":")
+                        return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                    }else{
+                        return `-`
+                    }
+                }
             },
             {
-                "data": "jumat",
+                "data": "hari",
                 "sClass":"text-center",
+                render: (t,e,a) =>{
+                    if(t == 5){
+                        const jam_awal = a.jamawal.split(":")
+                        const jam_akhir = a.jamakhir.split(":")
+                        return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                    }else{
+                        return `-`
+                    }
+                }
             },
             {
-                "data": "sabtu",
+                "data": "hari",
                 "sClass":"text-center",
+                render: (t,e,a) =>{
+                    if(t == 6){
+                        const jam_awal = a.jamawal.split(":")
+                        const jam_akhir = a.jamakhir.split(":")
+                        return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                    }else{
+                        return `-`
+                    }
+                }
             },
             {
-                "data": "minggu",
+                "data": "hari",
                 "sClass":"text-center",
+                render: (t,e,a) =>{
+                    if(t == 7){
+                        const jam_awal = a.jamawal.split(":")
+                        const jam_akhir = a.jamakhir.split(":")
+                        return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                    }else{
+                        return `-`
+                    }
+                }
             },
         ],
         language: {

@@ -12,19 +12,10 @@ use App\list_dokter;
 
 class jsontable extends Controller
 {
-    function jadwal_dokter_user(Request $r){
-        if($r->filter){
-            $dokter = new dokter();
-            $data = $dokter::where('specialist',$r->filter)->all();
-            return response()->json([
-                "data"=> $data
-            ]);
-        }else {
-
+    function jadwal_dokter_user(){
             return response()->json([
                 "data" => dokter::all()
             ]);
-        }
     }
     function janji_pasien(){
         return response()->json([
