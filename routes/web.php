@@ -62,6 +62,7 @@ Route::middleware('usercheck')->group(function(){
     Route::get('/table/list_dokter',"jsontable@list_dokter");
 });
 Route::get('/table/jadwal_dokter','jsontable@jadwal_dokter_user');
+Route::get('/table/janji_jadwal','jsontable@jadwal_dokter_janji');
 //external securing
 //Route::any('/css/*/*',function(){
 //    return redirect()->back();
