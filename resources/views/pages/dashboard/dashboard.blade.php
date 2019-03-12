@@ -15,7 +15,7 @@
         @include('pages.dashboard.menu')
     </div>
     <div class="col-lg-10 p-4">
-        <!-- CURRENTLY EMPTY -->
+        <div id="chartdiv"></div>
     </div>
 </main>
 @include('pages.dashboard.footer')

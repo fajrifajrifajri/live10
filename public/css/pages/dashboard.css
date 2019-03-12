@@ -68,6 +68,11 @@ main * h2 {
     vertical-align: top;
 }
 
+#chartdiv {
+    width: 100%;
+    height: 500px;
+  }
+
 /******************* DASHBOARD DATATABLE *******************/
 
 .dataTable {
