@@ -119,7 +119,7 @@ $(document).ready(() => {
         processing:true,
         language: {
             loadingRecords:'Please Wait',
-            processing:'<div class="fa-spin"></div>',
+            processing:'<div class="spinner-load"></div>',
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -292,7 +292,7 @@ $(document).ready(() => {
         processing:true,
         language: {
             loadingRecords:'Please Wait',
-            processing:'<div class="fa-spin"></div>',
+            processing:'<div class="spinner-load"></div>',
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -403,7 +403,7 @@ $(document).ready(() => {
         processing:true,
         language: {
             loadingRecords:'Please Wait',
-            processing:'<div class="fa-spin"></div>',
+            processing:'<div class="spinner-load"></div>',
 
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
@@ -481,7 +481,7 @@ $(document).ready(() => {
         processing:true,
         language: {
             loadingRecords:'Please Wait',
-            processing:'<div class="fa-spin"></div>',
+            processing:'<div class="spinner-load"></div>',
 
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
@@ -562,7 +562,7 @@ $(document).ready(() => {
         processing:true,
         language: {
             loadingRecords:'Please Wait',
-            processing:'<div class="fa-spin"></div>',
+            processing:'<div class="spinner-load"></div>',
 
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
