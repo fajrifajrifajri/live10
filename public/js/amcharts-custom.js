@@ -7,52 +7,32 @@ chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
 chart.data = [
   {
-    country: "USA",
-    visits: 23725
-  },
-  {
-    country: "China",
-    visits: 1882
-  },
-  {
-    country: "Japan",
-    visits: 1809
-  },
-  {
-    country: "Germany",
-    visits: 1322
-  },
-  {
-    country: "UK",
-    visits: 1122
-  },
-  {
-    country: "France",
-    visits: 1114
-  },
-  {
-    country: "India",
+    country: "Senin",
     visits: 984
   },
   {
-    country: "Spain",
-    visits: 711
+    country: "Selasa",
+    visits: 1114
   },
   {
-    country: "Netherlands",
-    visits: 665
+    country: "Rabu",
+    visits: 1122
   },
   {
-    country: "Russia",
-    visits: 580
+    country: "Kamis",
+    visits: 1322
   },
   {
-    country: "South Korea",
-    visits: 443
+    country: "Jum'at",
+    visits: 1809
   },
   {
-    country: "Canada",
-    visits: 441
+    country: "Sabtu",
+    visits: 1882
+  },
+  {
+    country: "Minggu",
+    visits: 23725
   }
 ];
 
