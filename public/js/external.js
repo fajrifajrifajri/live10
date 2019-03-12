@@ -110,7 +110,9 @@ $(document).ready(() => {
     $('.btn-dokter').on('click', function () {
         const data = $(this).data('dokter');
             if (data === "all") {
-                $('.dokter').show();
+                $('#asd').hide(600, function(){
+                    $('.dokter').show()
+            });
             } else {
                 $('#asd').hide(600, function(){
                     $('.dokter').hide()
