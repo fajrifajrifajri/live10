@@ -2,84 +2,73 @@
 
 #dashboard {
     height: 100vh;
+    background-color: #4c565e;
 }
 
 #dashboard nav {
     background-color: #384551;
-    padding: 1em 4em;
-}
+    padding: 0.8em 0.5em;
+} 
 
 #dashboard nav img {
-    width: 5%;
+    width: 3%;
 }
 
 #dashboard main {
-    text-align: center;
-}
-
-#dashboard main div div:nth-last-child(1) a {
-    display: block;
-}
-
-#dashboard .row {
-    margin-left: 0;
+    margin-top: 2em;
+    margin-left: 2em;
     margin-right: 0;
+    height: 92vh;
+    background-color:#384551;
 }
 
-#dashboard main div:nth-last-child(2) {
-    background-color: #9ACFFF;
+#dashboard main div:nth-last-child(1) {
+    background-color: #FFF;
 }
 
 #dashboard * a {
-    color: #FBF9F9;
     text-decoration: none;
-}
-
-#profile {
-    background-color: #E37F7F !important;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding: 1em 1em 0.1em 1em;
-    color: #FFF;
-}
-
-#profile img {
-    margin-bottom: 0.5em;
-    width: 120px;
-    height: 120px;
-}
-
-#profile p {
-    text-transform: uppercase;
-    margin-top: 0.5em;
-    margin-right: -15px;
-    margin-left: -15px;
-    background-color: #cd5c5c82;
-    padding: 0.5em;
+    cursor: pointer;
 }
 
 #menu {
     position: relative;
     min-height: 279px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-left: -15px;
     margin-right: -15px;
+    background-color: #384551 !important;
+    padding-top: 1em;
+    text-align: left;
+}
+
+#collapseOne {
+    background-color: #42505d !important;
+    font-size: 0.85em;
 }
 
 #menu a {
-    padding: 0.5em;
+    color: #FBF9F9;
+    display: block;
+    padding: 0.75em;
+    padding-left: 1.5em;
 }
 
-#menu a:nth-last-of-type(1) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+#menu a:hover {
+    background-color: #4a5967;
 }
 
-#menu a:nth-of-type(even) {
-    background-color: #6BB9FF;
+main * h2 {
+    display: inline-block;
+    margin-bottom: 1em;
 }
+
+#add {
+    margin-left: 0.5em;
+    vertical-align: top;
+}
+
+/******************* DASHBOARD DATATABLE *******************/
 
 .dataTable {
     margin: 0 !important;

@@ -158,6 +158,105 @@ $(document).ready(() => {
         }
     })
 
+    let tbljanjijadwal = $('#tbljanjijadwal').DataTable( {
+        // dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>", // horizobtal scrollable datatable
+        responsive: true,
+        ajax: `${base_url}table/janji_jadwal`,
+        columns: [
+            {
+                "data": "*",
+                "sClass":"text-center",
+                render:(t,e,a,b)=>{
+                    const jam_awal = a.jamawal.split(":")
+                    const jam_akhir = a.jamakhir.split(":")
+                    return `${jam_awal[0]}:${jam_akhir[1]} - ${jam_akhir[0]}:${jam_akhir[1]}`
+                }
+            },
+            {
+                "data": "hari",
+                "sClass":"text-center",
+                render:(t,e,a)=>{
+                    console.log(a);
+                    return t == 1 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                }
+            },
+            {
+                "data": "hari",
+                "sClass":"text-center",
+                render:(t,e,a)=>{
+                    return t == 2 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                }
+            },
+            {
+                "data": "hari",
+                "sClass":"text-center",
+                render:(t,e,a)=>{
+                    return t == 3 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                }
+            },
+            {
+                "data": "hari",
+                "sClass":"text-center",
+                render:(t,e,a)=>{
+                    return t == 4 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                }
+            },
+            {
+                "data": "hari",
+                "sClass":"text-center",
+                render:(t,e,a)=>{
+                    return t == 5 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                }
+            },
+            {
+                data: "hari",
+                sClass: "text-center",
+                render:(t,e,a)=>{
+                    return t == 6 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                }
+            },
+            {
+                "data": "hari",
+                "sClass":"text-center",
+                render:(t,e,a)=>{
+                    return t == 7 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                }
+            }
+        ],
+        language: {
+            "aria": {
+                "sortAscending": ": activate to sort column ascending",
+                "sortDescending": ": activate to sort column descending"
+            },
+            "emptyTable": "Data Janji tidak tersedia",
+            "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+            "infoEmpty": "Data tidak ditemukan",
+            "infoFiltered": "(Terfilter _TOTAL_ data dari _MAX_ total data)",
+            "lengthMenu": "_MENU_ data",
+            "search": "Cari:",
+            "zeroRecords": "Tidak ada data yang cocok"
+        },
+        colReorder: {
+            realtime: false
+        },
+        buttons:[
+            { extend: 'print', className: 'btn m-btn--square  m-btn m-btn--gradient-from-primary m-btn--gradient-to-info' },
+            { extend: 'copyHtml5', className: 'btn m-btn--square  m-btn m-btn--gradient-from-success m-btn--gradient-to-accent' },
+            { extend: 'excelHtml5', className: 'btn m-btn--square  m-btn m-btn--gradient-from-danger m-btn--gradient-to-warning' },
+            { extend: 'csvHtml5', className: 'btn m-btn--square  m-btn m-btn--gradient-from-warning m-btn--gradient-to-danger' },
+            { extend: 'pdfHtml5', className: 'btn m-btn--square  m-btn m-btn--gradient-from-info m-btn--gradient-to-accent' }
+        ],
+        "order": [
+            [0, 'asc']
+        ],
+        "lengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, "All"] // change per page values here
+        ],
+        // set the initial value
+        "pageLength": 10
+    } );
+
     let tbljanji = $('#tbljanji').DataTable( {
         // dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>", // horizobtal scrollable datatable
         responsive: true,
@@ -228,7 +327,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
             }
         ],
@@ -293,7 +392,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>`;
                 }
             },
             {
@@ -302,7 +401,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
             }
         ],
@@ -370,7 +469,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>`;
                 }
             },
             {
@@ -379,7 +478,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
             }
         ],

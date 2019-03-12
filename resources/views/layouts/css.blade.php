@@ -2,7 +2,7 @@
 <script defer src={{ asset('js/all.min.js') }}></script>
 <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-<link rel="stylesheet" href="{{url('//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')}}">
+<link rel="stylesheet" href="{{url('https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/index.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/index-r.css') }}">

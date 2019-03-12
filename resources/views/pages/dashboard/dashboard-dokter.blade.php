@@ -9,20 +9,15 @@
     @include('layouts.css')
 </head>
 <body id="dashboard">
-<nav>
-    <img src="{{ asset('img/Borobudur logo.png') }}" alt="borobudur logo">
-</nav>
+@include('pages.dashboard.navbar')
 <main class="row">
     <div class="col-lg-2">
-        <div id="profile">
-            <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
-            <p>{{Session::get('user')}}</p>
-        </div>
         @include('pages.dashboard.menu')
     </div>
-    <div class="col-lg-10 p-4">
+    <div class="col-lg-10 p-5">
         <div class="col-sm-6"></div>
-        <table class="table table-striped table-responsive text-center" id="tbldokter">
+        <h2>Dokter</h2> <button id="add" class="btn btn-primary">Add new</button>
+        <table class="table table-striped table-bordered table-responsive" id="tbldokter" width="100%">
             <thead>
             <tr>
                 <th scope="col">No</th>

@@ -12,6 +12,11 @@ use App\list_dokter;
 
 class jsontable extends Controller
 {
+    function jadwal_dokter_janji(){
+        return response()->json([
+            "data"=>dokter::all()
+        ]);
+    }
     function jadwal_dokter_user(){
         $data = DB::table('dokter')
             ->select(

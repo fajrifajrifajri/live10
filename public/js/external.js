@@ -129,5 +129,15 @@ $(document).ready(() => {
         //         $('#pagi-dokter').html(res);
         //     }
         // })
-    })
+    });
+    let btns = document.getElementsByClassName( 'btn-data' );
+    for ( let btn of btns ) {
+        btn.onclick = function() {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Tolong isi semua form terlebih dahulu!'
+            })
+        }
+    }
 });

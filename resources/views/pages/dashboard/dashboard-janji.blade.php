@@ -9,20 +9,15 @@
     @include('layouts.css')
 </head>
 <body id="dashboard">
-<nav>
-    <img src="{{ asset('img/Borobudur logo.png') }}" alt="borobudur logo">
-</nav>
+@include('pages.dashboard.navbar')
 <main class="row">
     <div class="col-lg-2">
-        <div id="profile">
-            <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
-            <p>{{Session::get('user')}}</p>
-        </div>
         @include('pages.dashboard.menu')
     </div>
-    <div class="col-lg-10 p-4">
+    <div class="col-lg-10 p-5">
         <div class="col-sm-6"></div>
-        <table class="table table-striped text-center table-responsive" id="tbljanji">
+        <h2>Janji</h2> <button id="add" class="btn btn-primary">Add new</button>
+        <table class="table table-striped table-bordered table-responsive" id="tbljanji" width="100%">
             <thead>
             <tr>
                 <th scope="col">No</th>
@@ -30,9 +25,9 @@
                 {{--<th scope="col">Kode Antrian</th>--}}
                 <th scope="col">No Telp</th>
                 <th scope="col">Email</th>
-                <th scope="col">Nama Pasien</th>
-                <th scope="col">Tanggal Lahir Pasien</th>
-                <th scope="col">Nama Dokter</th>
+                <th scope="col">Pasien</th>
+                <th scope="col">Tanggal Lahir</th>
+                <th scope="col">Dokter</th>
                 <th scope="col">Harga</th>
                 <th scope="col">Tanggal Bertemu</th>
                 <th scope="col">&nbsp;</th>

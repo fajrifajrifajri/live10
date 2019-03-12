@@ -17,13 +17,13 @@
                         {{csrf_field()}}
                         <div class="form-group">
                             <select class="form-control" name="nama_dokter" id="nama_dokter" title="Nama dokter spesialis">
-                                <option value="">- Spesialis Anak -</option>
+                                <option value="">- Pilih Dokter -</option>
                                 @foreach($data as $dokter)
                                     <option value="{{$dokter['id']}}">{{$dokter['nama']}} - {{$dokter['keahlian']}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <table class="table table-striped text-center table-responsive-lg">
+                        <table class="table table-striped text-center table-responsive-lg" id="tbljanjijadwal">
                             <thead class="thead-light">
                                 <tr>
                                 <th scope="col">*</th>
@@ -36,48 +36,6 @@
                                 <th scope="col">Minggu</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                <th scope="row"> 08:00 - 11:30 </th>
-                                <td><a href="{{ url('/buat-janji-form/Sukamoldjo') }}">Dr. Sukamoldjo</a></td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                </tr>
-                                <tr>
-                                <th scope="row"> 12:30 - 15:00 </th>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td><a href="{{ url('/buat-janji-form/M. Firman') }}">Dr. M. Firman</a></td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                </tr>
-                                <tr>
-                                <th scope="row"> 15:30 - 18:00 </th>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                </tr>
-                                <tr>
-                                <th scope="row"> 19:30 - 20:00 </th>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                </tr>
-                            </tbody>
                         </table>
                     </form>
                 </div>
