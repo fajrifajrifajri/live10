@@ -20,6 +20,7 @@
                     @endforeach
                 </div>
                 <div class="col-lg-9">
+                    <span id="asd"> </span>
                     <div class="row">
                         @foreach($datadokter as $dokter)
                             <div class="col-lg-4 dokter dokter{{$dokter['specialist']}}" >

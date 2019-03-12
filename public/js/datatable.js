@@ -327,7 +327,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
             }
         ],
@@ -392,7 +392,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>`;
                 }
             },
             {
@@ -401,7 +401,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
             }
         ],
@@ -469,7 +469,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>`;
                 }
             },
             {
@@ -478,7 +478,7 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": function (data) {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fa fa-trash"></i></button>`;
+                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
             }
         ],

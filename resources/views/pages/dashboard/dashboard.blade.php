@@ -9,19 +9,13 @@
     @include('layouts.css')
 </head>
 <body id="dashboard">
-<nav>
-    <img src="{{ asset('img/Borobudur logo.png') }}" alt="borobudur logo">
-</nav>
+@include('pages.dashboard.navbar')
 <main class="row">
     <div class="col-lg-2">
-        <div id="profile">
-            <img src="{{ asset('img/Female doctor.jpg') }}" class="rounded-circle dokter-img" alt="dokter">
-            <p>{{Session::get('user')}}</p>
-        </div>
         @include('pages.dashboard.menu')
     </div>
     <div class="col-lg-10 p-4">
-        <!-- CURRENTLY EMPTY -->
+        <div id="chartdiv"></div>
     </div>
 </main>
 @include('pages.dashboard.footer')
