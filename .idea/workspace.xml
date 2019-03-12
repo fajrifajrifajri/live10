@@ -92,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/datatable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="184" column="93" selection-start-line="184" selection-start-column="93" selection-end-line="184" selection-end-column="93" />
+            <state relative-caret-position="206">
+              <caret line="185" column="48" selection-start-line="185" selection-start-column="48" selection-end-line="185" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -147,6 +147,7 @@
       <find>{}</find>
       <find>janji2</find>
       <find>getbuatja</find>
+      <find>rand(1,</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -452,12 +453,12 @@
       <workItem from="1552282010085" duration="1180000" />
       <workItem from="1552312822249" duration="8053000" />
       <workItem from="1552325970406" duration="10000" />
-      <workItem from="1552378628895" duration="7887000" />
+      <workItem from="1552378628895" duration="8193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116298000" />
+    <option name="totallyTimeSpent" value="116604000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -835,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/datatable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="184" column="93" selection-start-line="184" selection-start-column="93" selection-end-line="184" selection-end-column="93" />
+        <state relative-caret-position="206">
+          <caret line="185" column="48" selection-start-line="185" selection-start-column="48" selection-end-line="185" selection-end-column="48" />
         </state>
       </provider>
     </entry>
