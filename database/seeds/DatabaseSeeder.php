@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
-            'jamakhir' => "21:00:00",
+            'jamakhir' => "22:00:00",
             'specialist' => "1",
             'gambardokter'=>"asd.jpg"
         ]);
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'tipe_dokter' => "2",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
-            'jamakhir' => "21:00:00",
+            'jamakhir' => "22:00:00",
             'specialist' => "2",
             'gambardokter'=>"asd.jpg"
         ]);
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
             'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
-            'jamakhir' => "21:00:00",
+            'jamakhir' => "22:00:00",
             'specialist' => "3",
             'gambardokter'=>"asd.jpg"
         ]);
@@ -67,7 +67,7 @@ class DatabaseSeeder extends Seeder
             'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
-            'jamakhir' => "21:00:00",
+            'jamakhir' => "22:00:00",
             'specialist' => "3",
             'gambardokter'=>"asd.jpg"
         ]);
@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
             'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
-            'jamakhir' => "21:00:00",
+            'jamakhir' => "22:00:00",
             'specialist' => "2",
             'gambardokter'=>"asd.jpg"
         ]);
