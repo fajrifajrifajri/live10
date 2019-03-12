@@ -110,10 +110,14 @@ $(document).ready(() => {
     $('.btn-dokter').on('click', function () {
         const data = $(this).data('dokter');
             if (data === "all") {
-                $('.dokter').show(800);
+                $('.dokter').show();
             } else {
-                $('.dokter').hide(800);
-                $(`.dokter${data}`).show(800);
+                $('#asd').hide(600, function(){
+                    $('.dokter').hide()
+                });
+                $(`#asd`).show(600, function(){
+                    $(`.dokter${data}`).show()
+                });
             }
 
         // $.ajax({
