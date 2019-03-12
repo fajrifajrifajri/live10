@@ -2,7 +2,7 @@ $(document).ready(() => {
     let base_url = window.location.origin + "/";
     let base_admin = window.location.origin + "/admin/";
     let host = window.location.host;
-
+    $('img').prop('draggable',false)
     // $('#nama_dokter').select2({
     //
     // });
@@ -49,9 +49,9 @@ $(document).ready(() => {
                 },
                 success: res => {
                     if (res) {
-                        //ketika data SUKSES dikirim
                         alert(res);
                     } else {
+                        //ketika data SUKSES dikirim
                         alert('data masuk');
                     }
                 },

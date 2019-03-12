@@ -116,7 +116,10 @@ $(document).ready(() => {
                 }
             },
         ],
+        processing:true,
         language: {
+            loadingRecords:'Please Wait',
+            processing:'<div class="fa-spin"></div>',
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -286,7 +289,10 @@ $(document).ready(() => {
             },
 
         ],
+        processing:true,
         language: {
+            loadingRecords:'Please Wait',
+            processing:'<div class="fa-spin"></div>',
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -297,7 +303,7 @@ $(document).ready(() => {
             "infoFiltered": "(Terfilter _TOTAL_ data dari _MAX_ total data)",
             "lengthMenu": "_MENU_ data",
             "search": "Cari:",
-            "zeroRecords": "Tidak ada data yang cocok"
+            "zeroRecords": "Tidak ada data yang cocok",
         },
         colReorder: {
             realtime: false
@@ -394,7 +400,11 @@ $(document).ready(() => {
                 }
             }
         ],
+        processing:true,
         language: {
+            loadingRecords:'Please Wait',
+            processing:'<div class="fa-spin"></div>',
+
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -468,7 +478,11 @@ $(document).ready(() => {
                 }
             }
         ],
+        processing:true,
         language: {
+            loadingRecords:'Please Wait',
+            processing:'<div class="fa-spin"></div>',
+
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -545,7 +559,11 @@ $(document).ready(() => {
                 }
             }
         ],
+        processing:true,
         language: {
+            loadingRecords:'Please Wait',
+            processing:'<div class="fa-spin"></div>',
+
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
