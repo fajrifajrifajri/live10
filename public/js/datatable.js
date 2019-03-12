@@ -182,9 +182,7 @@ $(document).ready(() => {
                     let nama = [];
                     for(i = 0;i <= hr.length;i++){
                         if(hr[i] == 1){
-                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
-                        }else{
-                            nama.push("-")
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a><br>`);
                         }
                     }
                     return nama.join();
@@ -200,9 +198,7 @@ $(document).ready(() => {
                     let nama = [];
                     for(i = 0;i <= hr.length;i++){
                         if(hr[i] == 2){
-                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
-                        }else{
-                            nama.push("-")
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a><br>`);
                         }
                     }
                     return nama.join();
@@ -218,9 +214,7 @@ $(document).ready(() => {
                     let nama = [];
                     for(i = 0;i <= hr.length;i++){
                         if(hr[i] == 3){
-                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
-                        }else{
-                            nama.push("-")
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a><br>`);
                         }
                     }
                     return nama.join();
@@ -236,9 +230,7 @@ $(document).ready(() => {
                     let nama = [];
                     for(i = 0;i <= hr.length;i++){
                         if(hr[i] == 4){
-                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
-                        }else{
-                            nama.push("-")
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a><br>`);
                         }
                     }
                     return nama.join();
@@ -254,9 +246,7 @@ $(document).ready(() => {
                     let nama = [];
                     for(i = 0;i <= hr.length;i++){
                         if(hr[i] == 5){
-                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
-                        }else{
-                            nama.push("-")
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a><br>`);
                         }
                     }
                     return nama.join();
@@ -272,9 +262,7 @@ $(document).ready(() => {
                     let nama = [];
                     for(i = 0;i <= hr.length;i++){
                         if(hr[i] == 6){
-                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
-                        }else{
-                            nama.push("-")
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a><br>`);
                         }
                     }
                     return nama.join();
@@ -290,9 +278,7 @@ $(document).ready(() => {
                     let nama = [];
                     for(i = 0;i <= hr.length;i++){
                         if(hr[i] == 7){
-                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
-                        }else{
-                            nama.push("-")
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a><br>`);
                         }
                     }
                     return nama.join();
