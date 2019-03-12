@@ -13,8 +13,17 @@ use App\list_dokter;
 class jsontable extends Controller
 {
     function jadwal_dokter_janji(){
+        $data = DB::table('dokter')
+            ->select(
+                'jamawal',
+                'jamakhir',
+                DB::raw('GROUP_CONCAT(nama) as nama_dokter'),
+                DB::raw('GROUP_CONCAT(hari) as hari')
+            )
+            ->groupBy('jamawal','jamakhir')
+            ->get();
         return response()->json([
-            "data"=>dokter::all()
+            "data"=>$data
         ]);
     }
     function jadwal_dokter_user(){

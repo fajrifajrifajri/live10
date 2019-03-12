@@ -176,52 +176,129 @@ $(document).ready(() => {
                 "data": "hari",
                 "sClass":"text-center",
                 render:(t,e,a)=>{
-                    console.log(a);
-                    return t == 1 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                    let exp = a.nama_dokter.split(",");
+                    let hr = a.hari.split(",");
+                    let i,x;
+                    let nama = [];
+                    for(i = 0;i <= hr.length;i++){
+                        if(hr[i] == 1){
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
+                        }else{
+                            nama.push("-")
+                        }
+                    }
+                    return nama.join();
                 }
             },
             {
                 "data": "hari",
                 "sClass":"text-center",
                 render:(t,e,a)=>{
-                    return t == 2 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                    let exp = a.nama_dokter.split(",");
+                    let hr = a.hari.split(",");
+                    let i,x;
+                    let nama = [];
+                    for(i = 0;i <= hr.length;i++){
+                        if(hr[i] == 2){
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
+                        }else{
+                            nama.push("-")
+                        }
+                    }
+                    return nama.join();
                 }
             },
             {
                 "data": "hari",
                 "sClass":"text-center",
                 render:(t,e,a)=>{
-                    return t == 3 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                    let exp = a.nama_dokter.split(",");
+                    let hr = a.hari.split(",");
+                    let i,x;
+                    let nama = [];
+                    for(i = 0;i <= hr.length;i++){
+                        if(hr[i] == 3){
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
+                        }else{
+                            nama.push("-")
+                        }
+                    }
+                    return nama.join();
                 }
             },
             {
                 "data": "hari",
                 "sClass":"text-center",
                 render:(t,e,a)=>{
-                    return t == 4 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                    let exp = a.nama_dokter.split(",");
+                    let hr = a.hari.split(",");
+                    let i,x;
+                    let nama = [];
+                    for(i = 0;i <= hr.length;i++){
+                        if(hr[i] == 4){
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
+                        }else{
+                            nama.push("-")
+                        }
+                    }
+                    return nama.join();
                 }
             },
             {
                 "data": "hari",
                 "sClass":"text-center",
                 render:(t,e,a)=>{
-                    return t == 5 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
-                }
-            },
-            {
-                data: "hari",
-                sClass: "text-center",
-                render:(t,e,a)=>{
-                    return t == 6 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                    let exp = a.nama_dokter.split(",");
+                    let hr = a.hari.split(",");
+                    let i,x;
+                    let nama = [];
+                    for(i = 0;i <= hr.length;i++){
+                        if(hr[i] == 5){
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
+                        }else{
+                            nama.push("-")
+                        }
+                    }
+                    return nama.join();
                 }
             },
             {
                 "data": "hari",
                 "sClass":"text-center",
                 render:(t,e,a)=>{
-                    return t == 7 ? `<a href="${base_url}buat-janji-form/${a.nama.replace('Dr. ','')}">${a.nama}</a>` : "-";
+                    let exp = a.nama_dokter.split(",");
+                    let hr = a.hari.split(",");
+                    let i,x;
+                    let nama = [];
+                    for(i = 0;i <= hr.length;i++){
+                        if(hr[i] == 6){
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
+                        }else{
+                            nama.push("-")
+                        }
+                    }
+                    return nama.join();
                 }
-            }
+            },
+            {
+                "data": "hari",
+                "sClass":"text-center",
+                render:(t,e,a)=>{
+                    let exp = a.nama_dokter.split(",");
+                    let hr = a.hari.split(",");
+                    let i,x;
+                    let nama = [];
+                    for(i = 0;i <= hr.length;i++){
+                        if(hr[i] == 7){
+                            nama.push(`<a href="${base_url}buat-janji-form/${exp[i]}">${(exp[i])}</a>`);
+                        }else{
+                            nama.push("-")
+                        }
+                    }
+                    return nama.join();
+                }
+            },
+
         ],
         language: {
             "aria": {
