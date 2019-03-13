@@ -37,8 +37,14 @@ class PagesController extends Controller
     public function getDashboardJadwal(){
         return view('pages.dashboard.dashboard-jadwal');
     }
+    public function getDashboardJadwalInput(){
+        return view('pages.dashboard.dashboard-jadwal-input');
+    }
     public function getDashboardDokter(){
         return view('pages.dashboard.dashboard-dokter');
+    }
+    public function getDashboardDokterInput(){
+        return view('pages.dashboard.dashboard-dokter-input');
     }
     public function getBuatjanjiform($dokterr){
         if($dokterr) {

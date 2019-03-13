@@ -53,9 +53,17 @@ Route::middleware('usercheck')->group(function(){
         'uses' => 'PagesController@getDashboardJadwal',
         'as' => 'dashboard-jadwal'
         ]);
+    Route::get('/admin/jadwal/add', [
+        'uses' => 'PagesController@getDashboardJadwalInput',
+        'as' => 'dashboard-jadwal-input'
+        ]);
     Route::get('/admin/dokter', [
         'uses' => 'PagesController@getDashboardDokter',
         'as' => 'dashboard-dokter'
+        ]);
+    Route::get('/admin/dokter/add', [
+        'uses' => 'PagesController@getDashboardDokterInput',
+        'as' => 'dashboard-dokter-input'
         ]);
     Route::get('/table/janji_pasien',"jsontable@janji_pasien");
     Route::get('/table/jadwal_dokter',"jsontable@jadwal_dokter");

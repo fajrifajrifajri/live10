@@ -16,7 +16,7 @@
     </div>
     <div class="col-lg-10 p-5">
         <div class="col-sm-6"></div>
-        <h2>Janji</h2> <button id="add" class="btn btn-primary">Add new</button>
+        <h2>Janji</h2>
         <table class="table table-striped table-bordered table-responsive" id="tbljanji" width="100%">
             <thead>
             <tr>

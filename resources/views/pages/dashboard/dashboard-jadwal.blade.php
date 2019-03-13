@@ -16,7 +16,7 @@
     </div>
     <div class="col-lg-10 p-5">
         <div class="col-sm-6"></div>
-        <h2>Jadwal</h2> <button id="add" class="btn btn-primary">Add new</button>
+        <h2>Jadwal</h2> <a href="{{ route('dashboard-jadwal-input') }}" id="add" class="btn btn-primary">Add new</a>
         <table class="table table-striped table-bordered table-responsive" id="tbljadwal" width="100%">
             <thead>
             <tr>
