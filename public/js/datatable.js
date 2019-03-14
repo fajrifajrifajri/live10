@@ -14,7 +14,7 @@ $(document).ready(() => {
         // dom: "<'row'<'col-sm-6 text-left'f><'col-sm-6 text-right'B>>\n\t\t\t<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>", // horizobtal scrollable datatable
         dom: 'lrtip',
         responsive: true,
-        ajax: `${base_url}table/jadwal_dokter`,
+        ajax: `${base_url}table/jadwal_dokter_user`,
         columns: [
             {
                 "data": "nama",
@@ -448,15 +448,23 @@ $(document).ready(() => {
                 "sClass":"text-center",
             },
             {
+                "data": "nama",
+                "sClass":"text-center",
+            },
+            {
+                "data": "specialist",
+                "sClass":"text-center",
+            },
+            {
                 "data": "hari",
                 "sClass":"text-center",
             },
             {
-                "data": "jam",
+                "data": "jamawal",
                 "sClass":"text-center",
             },
             {
-                "data": "nama_dokter",
+                "data": "jamakhir",
                 "sClass":"text-center",
             },
             {

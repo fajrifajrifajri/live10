@@ -53,8 +53,23 @@ class jsontable extends Controller
     }
 
     function jadwal_dokter(){
+        $data = DB::table('dokter')
+        ->select(
+            'dokter.id',
+            'nama',
+            'specialist_dokter.specialist as specialist',
+            'hari',
+            'jamawal',
+            'jamakhir'
+        )
+        ->join(
+            'specialist_dokter', 'dokter.specialist',
+            "=",
+            "specialist_dokter.id"
+        )
+        ->get();
         return response()->json([
-            "data"=>jadwal_dokter::all()
+            "data" => $data
         ]);
     }
 
