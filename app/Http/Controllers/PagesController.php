@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\dokter;
 use App\specialist;
 use App\list_dokter;
@@ -19,9 +20,18 @@ class PagesController extends Controller
         ]);
     }
     public function getDokter(){
-        $list_dokter = new list_dokter();
+        $dokter = new dokter();
+        $data_dokter = DB::table('list_dokter')
+            ->select(
+                'id',
+                'nama_dokter',
+                'spesialis',
+                'foto'
+            )
+            ->join('specialist_dokter','specialist');
         return view('pages.dokter',[
-            "list_dokter"=>$list_dokter::all()
+            "list_dokter"=>list_dokter::all(),
+            "dokter"=>dokter::all()
         ]);
     }
     public function getBuatjanji(){

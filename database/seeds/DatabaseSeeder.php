@@ -125,52 +125,52 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('list_dokter')->insert([
             "nama_dokter"=>"Dr. Christine Siringo-ringo",
-            "spesialis"=>"Gigi",
+            "spesialis"=>rand(1,3),
             "foto"=> $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Abdurahman",
-            'spesialis' => "Anak",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Sultan Hamid",
-            'spesialis' => "Umum",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Susanti",
-            'spesialis' => "Anak",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Siparman",
-            'spesialis' => "Jantung",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Ramah",
-            'spesialis' => "Umum",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Drs. Susanto",
-            'spesialis' => "Umum",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Budiarjo",
-            'spesialis' => "Umum",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Antonius",
-            'spesialis' => "Lansia",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
         DB::table('list_dokter')->insert([
             'nama_dokter' => "Dr. Wahid Bahyu",
-            'spesialis' => "Gigi",
+            'spesialis' => rand(1,3),
             'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
 //        foreach (range(1,50) as $index){

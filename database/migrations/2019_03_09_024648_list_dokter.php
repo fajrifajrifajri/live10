@@ -16,8 +16,8 @@ class ListDokter extends Migration
         Schema::create('list_dokter', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_dokter');
-            $table->string('spesialis');
-            $table->binary('foto');
+            $table->integer('spesialis');
+            $table->string('foto');
             $table->timestamps();
         });
     }
