@@ -3,9 +3,9 @@ $(document).ready(() => {
     let base_admin = window.location.origin + "/admin/";
     let host = window.location.host;
     $('img').prop('draggable',false)
-    // $('#nama_dokter').select2({
-    //
-    // });
+    $('#spesialis').select2({
+        placeholder: "Pilih Specalist"
+    });
     $('.owl-carousel').owlCarousel({
         loop: true,
         autoplay: true,

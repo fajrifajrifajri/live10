@@ -23,7 +23,11 @@
                     <input type="text" class="form-control" name="namadokter" id="namadokter" placeholder="Nama dokter">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="spesialis" id="spesialis" placeholder="Spesialis">
+                    <select name="spesialis" id="spesialis" class="form-control">
+                        @foreach($spesialis as $data_specialist)
+                            <option value="{{$data_specialist['id']}}">{{$data_specialist['specialist']}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <input type="file" name="foto" id="foto" class="form-control-file">

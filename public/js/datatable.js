@@ -118,7 +118,6 @@ $(document).ready(() => {
         ],
         processing:true,
         language: {
-            loadingRecords:'Please Wait',
             processing:'<div class="spinner-border" role="status"></div>',
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
@@ -291,8 +290,7 @@ $(document).ready(() => {
         ],
         processing:true,
         language: {
-            loadingRecords:'Please Wait',
-            processing:'<div class="spinner-border" role="status"></div>',
+            processing:'Please Wait<div class="spinner-border" role="status"></div>',
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -394,7 +392,7 @@ $(document).ready(() => {
                 "data": "id",
                 "sClass": "text-center",
                 "orderable": false,
-                "mRender": function (data) {
+                "mRender": data => {
                     $('.btn-data').tooltip();
                     return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
@@ -402,7 +400,6 @@ $(document).ready(() => {
         ],
         processing:true,
         language: {
-            loadingRecords:'Please Wait',
             processing:'<div class="spinner-border" role="status"></div>',
 
             "aria": {
@@ -444,16 +441,22 @@ $(document).ready(() => {
         ajax: `${base_url}table/jadwal_dokter`,
         columns: [
             {
+                title: "no",
                 "data": "id",
                 "sClass":"text-center",
             },
             {
+                title: "Hari",
                 "data": "hari",
                 "sClass":"text-center",
             },
             {
+                title: "Jam",
                 "data": "jam",
                 "sClass":"text-center",
+                render: (t,e,a)=>{
+
+                }
             },
             {
                 "data": "nama_dokter",
@@ -463,7 +466,7 @@ $(document).ready(() => {
                 "data": "id",
                 "sClass": "text-center",
                 "orderable": false,
-                "mRender": function (data) {
+                "mRender": data => {
                     $('.btn-data').tooltip();
                     return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>`;
                 }
@@ -472,7 +475,7 @@ $(document).ready(() => {
                 "data": "id",
                 "sClass": "text-center",
                 "orderable": false,
-                "mRender": function (data) {
+                "mRender": data => {
                     $('.btn-data').tooltip();
                     return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
@@ -480,9 +483,7 @@ $(document).ready(() => {
         ],
         processing:true,
         language: {
-            loadingRecords:'Please Wait',
             processing:'<div class="spinner-border" role="status"></div>',
-
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -544,7 +545,7 @@ $(document).ready(() => {
                 "data": "id",
                 "sClass": "text-center",
                 "orderable": false,
-                "mRender": function (data) {
+                "mRender": data => {
                     $('.btn-data').tooltip();
                     return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>`;
                 }
@@ -553,7 +554,7 @@ $(document).ready(() => {
                 "data": "id",
                 "sClass": "text-center",
                 "orderable": false,
-                "mRender": function (data) {
+                "mRender": data => {
                     $('.btn-data').tooltip();
                     return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
                 }
@@ -561,7 +562,6 @@ $(document).ready(() => {
         ],
         processing:true,
         language: {
-            loadingRecords:'Please Wait',
             processing:'<div class="spinner-border" role="status"></div>',
 
             "aria": {

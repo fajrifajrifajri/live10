@@ -29,6 +29,7 @@ class jsontable extends Controller
     function jadwal_dokter_user(){
         $data = DB::table('dokter')
             ->select(
+                'id',
                 'nama',
                 'specialist_dokter.specialist as specialist',
                 'hari',
