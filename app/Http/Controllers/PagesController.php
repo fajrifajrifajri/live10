@@ -43,7 +43,10 @@ class PagesController extends Controller
         return view('pages.dashboard.dashboard-dokter');
     }
     public function getDashboardDokterInput(){
-        return view('pages.dashboard.dashboard-dokter-input');
+
+        return view('pages.dashboard.dashboard-dokter-input',[
+            "spesialis"=>specialist::all()
+        ]);
     }
     public function getBuatjanjiform($dokterr){
         if($dokterr) {

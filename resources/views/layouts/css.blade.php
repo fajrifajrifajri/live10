@@ -17,4 +17,4 @@
 <link rel="stylesheet" href="{{ asset('css/pages/admin.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dashboard.css') }}">
 <link rel="stylesheet" href="{{ asset('css/pages/dashboard-r.css') }}">
-{{--<link rel="stylesheet" href="{{asset('css/select2.js')}}">--}}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
