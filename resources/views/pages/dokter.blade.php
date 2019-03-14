@@ -15,7 +15,7 @@
                     </button>
                     @foreach($list_dokter as $listdokter)
                         <button type="button" class="btn btn-light btn-lg btn-block btn-dokter" data-dokter="{{$listdokter['id']}}">
-                            {{$listdokter['spesialist']}} <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
+                            {{$listdokter['specialist']}} <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
                         </button>
                     @endforeach
                 </div>
@@ -23,9 +23,9 @@
                     <span id="asd"> </span>
                     <div class="row">
                         @foreach($dokter as $list)
-                            <div class="col-lg-4 dokter dokter{{$list['spesialis']}}" >
-                                <img src="{{ $list['foto']}}" class="rounded-circle dokter-img" alt="dokter">
-                                <p>{{$list['nama_dokter']}}</p>
+                            <div class="col-lg-4 dokter dokter{{$list->specialist_id}}" >
+                                <img src="{{ $list->foto}}" class="rounded-circle dokter-img" alt="dokter">
+                                <p>{{$list->nama_dokter}}</p>
                             </div>
                         @endforeach
                     </div>

@@ -100,5 +100,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="core" level="application" />
+    <orderEntry type="library" name="charts" level="application" />
+    <orderEntry type="library" name="animated" level="application" />
+    <orderEntry type="library" name="material" level="application" />
+    <orderEntry type="library" name="de_DE" level="application" />
+    <orderEntry type="library" name="germanyLow" level="application" />
   </component>
 </module>

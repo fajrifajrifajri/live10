@@ -18,18 +18,6 @@
         <div class="col-sm-6"></div>
         <h2>Jadwal</h2> <a href="{{ route('dashboard-jadwal-input') }}" id="add" class="btn btn-primary">Add new</a>
         <table class="table table-striped table-bordered table-responsive" id="tbljadwal" width="100%">
-            <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama Dokter</th>
-                <th scope="col">Specialist</th>
-                <th scope="col">Hari</th>
-                <th scope="col">Jam Awal</th>
-                <th scope="col">Jam Akhir</th>
-                <th scope="col">&nbsp;</th>
-                <th scope="col">&nbsp;</th>
-            </tr>
-            </thead>
         </table>
     </div>
 </main>

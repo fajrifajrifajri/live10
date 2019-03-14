@@ -61,21 +61,34 @@ class jsontable extends Controller
             'hari',
             'jamawal',
             'jamakhir'
-        )
-        ->join(
-            'specialist_dokter', 'dokter.specialist',
+        )->join(
+            'specialist_dokter',
+            'dokter.specialist',
             "=",
             "specialist_dokter.id"
-        )
-        ->get();
+        )->get();
+
         return response()->json([
             "data" => $data
         ]);
     }
 
     function list_dokter(){
+        $data = DB::table('list_dokter')
+            ->select(
+                'list_dokter.id',
+                'nama_dokter',
+                'specialist_dokter.specialist as spesialis',
+                'foto'
+            )
+            ->join(
+                'specialist_dokter',
+                'spesialis',
+                '=',
+                'specialist_dokter.id'
+            )->get();
         return response()->json([
-            "data"=>list_dokter::all()
+            "data"=>$data
         ]);
     }
 }

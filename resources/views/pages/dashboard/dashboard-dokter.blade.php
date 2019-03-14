@@ -18,16 +18,6 @@
         <div class="col-sm-6"></div>
         <h2>Dokter</h2> <a href="{{ route('dashboard-dokter-input') }}" id="add" class="btn btn-primary">Add new</a>
         <table class="table table-striped table-bordered table-responsive" id="tbldokter" width="100%">
-            <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama Dokter</th>
-                <th scope="col">Spesialis</th>
-                <th scope="col">Foto</th>
-                <th scope="col">&nbsp;</th>
-                <th scope="col">&nbsp;</th>
-            </tr>
-            </thead>
         </table>
     </div>
 </main>

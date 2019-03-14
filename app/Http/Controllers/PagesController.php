@@ -20,18 +20,22 @@ class PagesController extends Controller
         ]);
     }
     public function getDokter(){
-        $dokter = new dokter();
         $data_dokter = DB::table('list_dokter')
             ->select(
-                'id',
                 'nama_dokter',
-                'spesialis',
+                'specialist_dokter.specialist as spesialis',
+                'specialist_dokter.id as specialist_id',
                 'foto'
             )
-            ->join('specialist_dokter','specialist');
+            ->join(
+                'specialist_dokter',
+                'list_dokter.spesialis',
+                '=',
+                'specialist_dokter.id'
+                )->get();
         return view('pages.dokter',[
-            "list_dokter"=>list_dokter::all(),
-            "dokter"=>dokter::all()
+            "dokter"=>$data_dokter,
+            "list_dokter"=>specialist::all()
         ]);
     }
     public function getBuatjanji(){

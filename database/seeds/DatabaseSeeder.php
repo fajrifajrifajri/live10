@@ -119,7 +119,7 @@ class DatabaseSeeder extends Seeder
             "tgl_bertemu"=>"2019-10-08"
         ]);
         DB::table('jadwal_dokter')->insert([
-            "hari"=>"Senin",
+            "hari"=>rand(1,7),
             "jam"=>"2230",
             "nama_dokter"=>"Sugiono"
         ]);
