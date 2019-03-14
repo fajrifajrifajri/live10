@@ -21,9 +21,11 @@
             <thead>
             <tr>
                 <th scope="col">No</th>
-                <th scope="col">Hari</th>
-                <th scope="col">Jam</th>
                 <th scope="col">Nama Dokter</th>
+                <th scope="col">Specialist</th>
+                <th scope="col">Hari</th>
+                <th scope="col">Jam Awal</th>
+                <th scope="col">Jam Akhir</th>
                 <th scope="col">&nbsp;</th>
                 <th scope="col">&nbsp;</th>
             </tr>
