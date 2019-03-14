@@ -464,14 +464,10 @@ $(document).ready(() => {
             {
 // <<<<<<< HEAD
                 title: "Jam",
-                "data": "jam",
 // =======
                 "data": "jamawal",
 // >>>>>>> 5949becfabedb03a1964bcdfd1aef9040d8fb085
                 "sClass":"text-center",
-                render: (t,e,a)=>{
-
-                }
             },
             {
                 "data": "jamakhir",
