@@ -13,19 +13,19 @@
                     <button type="button" class="btn btn-light btn-lg btn-block btn-dokter" data-dokter="all">
                         Semua <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
                     </button>
-                    @foreach($dataspecialist as $specialist)
-                        <button type="button" class="btn btn-light btn-lg btn-block btn-dokter" data-dokter="{{$specialist['id']}}">
-                            {{$specialist['specialist']}} <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
+                    @foreach($list_dokter as $listdokter)
+                        <button type="button" class="btn btn-light btn-lg btn-block btn-dokter" data-dokter="{{$listdokter['spesialis']}}">
+                            {{$listdokter['spesialis']}} <span class="fas fa-angle-right float-right" aria-hidden="true"></span>
                         </button>
                     @endforeach
                 </div>
                 <div class="col-lg-9">
                     <span id="asd"> </span>
                     <div class="row">
-                        @foreach($datadokter as $dokter)
-                            <div class="col-lg-4 dokter dokter{{$dokter['specialist']}}" >
-                                <img src="{{ asset('img/Female doctor.jpg')}}" class="rounded-circle dokter-img" alt="dokter">
-                                <p>{{$dokter['nama']}}</p>
+                        @foreach($list_dokter as $list)
+                            <div class="col-lg-4 dokter dokter{{$list['spesialis']}}" >
+                                <img src="{{ $list['foto']}}" class="rounded-circle dokter-img" alt="dokter">
+                                <p>{{$list['nama_dokter']}}</p>
                             </div>
                         @endforeach
                     </div>

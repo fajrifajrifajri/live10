@@ -124,9 +124,54 @@ class DatabaseSeeder extends Seeder
             "nama_dokter"=>"Sugiono"
         ]);
         DB::table('list_dokter')->insert([
-            "nama_dokter"=>"Senin",
-            "spesialis"=>"2230",
+            "nama_dokter"=>"Dr. Christine Siringo-ringo",
+            "spesialis"=>"Gigi",
             "foto"=> $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Abdurahman",
+            'spesialis' => "Anak",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Sultan Hamid",
+            'spesialis' => "Umum",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Susanti",
+            'spesialis' => "Anak",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Siparman",
+            'spesialis' => "Jantung",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Ramah",
+            'spesialis' => "Umum",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Drs. Susanto",
+            'spesialis' => "Umum",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Budiarjo",
+            'spesialis' => "Umum",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Antonius",
+            'spesialis' => "Lansia",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
+        ]);
+        DB::table('list_dokter')->insert([
+            'nama_dokter' => "Dr. Wahid Bahyu",
+            'spesialis' => "Gigi",
+            'foto' => $faker->imageUrl($width = 640, $height = 480, 'cats')
         ]);
 //        foreach (range(1,50) as $index){
 //            DB::table('dokter')->insert([

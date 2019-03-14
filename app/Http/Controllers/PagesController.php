@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\dokter;
 use App\specialist;
+use App\list_dokter;
 
 class PagesController extends Controller
 {
@@ -18,11 +19,9 @@ class PagesController extends Controller
         ]);
     }
     public function getDokter(){
-        $dokter = new dokter();
-        $specialist = new specialist();
+        $list_dokter = new list_dokter();
         return view('pages.dokter',[
-            "datadokter"=>$dokter::all(),
-            "dataspecialist"=>$specialist::all()
+            "list_dokter"=>$list_dokter::all()
         ]);
     }
     public function getBuatjanji(){
