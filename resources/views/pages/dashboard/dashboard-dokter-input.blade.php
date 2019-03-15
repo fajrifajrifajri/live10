@@ -17,7 +17,7 @@
     <div class="col-lg-10 p-5">
         <div class="col-sm-6">
             <h2>Nama Dokter</h2>
-            <form  method="post" id="dashboardinputdokter">
+            <form method="post" data-action="dokter">
                 {{csrf_field()}}
                 <div class="form-group">
                     <input type="text" class="form-control" name="namadokter" id="namadokter" placeholder="Nama dokter">

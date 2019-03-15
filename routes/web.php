@@ -68,6 +68,8 @@ Route::middleware('usercheck')->group(function(){
     Route::get('/table/janji_pasien',"jsontable@janji_pasien");
     Route::get('/table/jadwal_dokter',"jsontable@jadwal_dokter");
     Route::get('/table/list_dokter',"jsontable@list_dokter");
+    Route::get('js/admincrud.js');
+    Route::post('/admin/action/dokter','crud@insertdokter');
 });
 Route::get('/table/jadwal_dokter_user','jsontable@jadwal_dokter_user');
 Route::get('/table/janji_jadwal','jsontable@jadwal_dokter_janji');
