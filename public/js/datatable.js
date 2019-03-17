@@ -526,7 +526,7 @@ $(document).ready(() => {
         "pageLength": 10
     } );
 
-    let tbldokter = $('#tbldokter').DataTable( {
+    let tbllistdokter = $('#tbllist_dokter').DataTable( {
         responsive: true,
         ajax: `${base_url}table/list_dokter`,
         columns: [
@@ -538,21 +538,21 @@ $(document).ready(() => {
             {
                 title:'Nama Dokter',
                 "data": "nama_dokter",
-                "sClass":"text-center",
+                "sClass":"text-center dt dt1",
             },
             {
                 title:'Spesialis',
                 "data": "spesialis",
-                "sClass":"text-center",
+                "sClass":"text-center dt dt2",
             },
             {
                 title:'Foto Dokter',
                 "data": "foto",
-                "sClass":"text-center",
+                "sClass":"text-center dt dt3",
                 "targets": 0,
                 "orderable": false,
                 render: (t,e,a)=> {
-                    return `<img width="100%" alt="dokter" src="${t}">`
+                    return `<img width="100%" alt="dokter" src="${base_url}storage/dokter/${t}">`
                 }
             },
             {
@@ -562,7 +562,42 @@ $(document).ready(() => {
                 "orderable": false,
                 "mRender": data => {
                     $('.btn-data').tooltip();
-                    return `<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>&nbsp;<button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="janji_pasien" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>`;
+                    return `
+                        <a href="${base_admin}dokter/edit/${data}"
+                        class="btn btn-circle btn-primary btn-xs btn-data btn-edit" 
+                        data-toggle="tooltip" data-placement="top" title="Edit Data">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                        &nbsp;
+                        <button type="button" 
+                        class="btn btn-circle btn-danger btn-xs btn-data btn-del" 
+                        data-id=${data} data-table="list_dokter" data-toggle="tooltip" 
+                        data-placement="top" title="Hapus Data">
+                            <i class="fas fa-times"></i>
+                        </button>`;
+                }
+            }
+        ],
+        createdRow: ( row, data, dataIndex ) => {
+            $(row).addClass('rowss');
+        },
+        columnDefs: [
+            {
+                targets: 1,
+                createdCell: (td, cellData, rowData, row, col) => {
+                    $(td).attr('data-row', 'nama_dokter');
+                    $(td).attr('data-id',rowData.id)
+                    $(td).attr('data-target',col)
+                    $(td).attr('data-table','a');
+                    console.log($(td).find('table').prop('id'))
+                }
+            },
+            {
+                targets:2,
+                createdCell: (td,cellData,rowData,row,col)=>{
+                    $(td).attr('data-row','spesialis');
+                    $(td).attr('data-id',rowData.id)
+                    $(td).attr('data-target',col)
                 }
             }
         ],
@@ -601,4 +636,49 @@ $(document).ready(() => {
         ],
         "pageLength": 10
     } );
+    $(document).on('dblclick','.dt',function (e) {
+        e.stopPropagation();
+        let row = $(this).data('row'),
+            id = $(this).data('id'),
+            target = $(this).data('target'),
+            data = $(this).html();
+        $(this).closest('.rowss').find(`.dt${target}`).first().html(`
+            <input type="text" class="form-control a"
+                    data-row="${row}" data-id="${id}" value="${data}">
+            `);
+        $('.a').first().focus();
+
+    });
+    $(document).on('focusout','.dt',function (e) {
+        // let target = $(this).data('target')
+        table.ajax.reload();
+        // $('.rowss').find(`.dt${target}`).html(ori);
+    })
+    $(document).on('keypress','.a',function (e) {
+        const val = $(this).val();
+        const id = $(this).data('id');
+        const row = $(this).data('row');
+        if(e.which == 13){
+            $.ajax({
+                type:'POST',
+                url:'action.php',
+                data:{
+                    val:val,
+                    id:id,
+                    row:row
+                },
+                success: res=>{
+                    if(res){
+                        alert(res)
+                    }else{
+                        table.ajax.reload();
+                    }
+                }
+            })
+        }else{
+
+        }
+    })
+    // table.buttons().container()
+    //     .appendTo( $('.col-sm-6:eq(0)', table.table().container() ) );
 })

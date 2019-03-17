@@ -17,7 +17,7 @@
     <div class="col-lg-10 p-5">
         <div class="col-sm-6">
             <h2>Nama Dokter</h2>
-            <form method="post" data-action="dokter">
+            <form method="post" data-action="dokter" action="http://localhost:8000/admin/action/dokter" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="form-group">
                     <input type="text" class="form-control" name="namadokter" id="namadokter" placeholder="Nama dokter">

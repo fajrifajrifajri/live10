@@ -17,3 +17,4 @@
 <!-------------------------------------------------------------------->
 <script src="{{asset('js/function.js')}}"></script>
 <script src="{{asset('js/external.js')}}"></script>
+<script src="{{asset('js/admincrud.js')}}"></script>

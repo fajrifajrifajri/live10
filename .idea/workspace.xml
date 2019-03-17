@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69a4fbde-f660-4638-b5d4-6f9726d6be51" name="Default Changelist" comment="asd">
-      <change afterPath="$PROJECT_DIR$/public/js/admincrud.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/admincrud.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admincrud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/datatable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/datatable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter-input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter-input.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,6 +73,20 @@
         <item name="rsborobudur@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="rsborobudur: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="migrations: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rsborobudur@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rsborobudur: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="password_resets: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rsborobudur@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rsborobudur: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="specialist_dokter: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -80,26 +97,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="71" column="57" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
+            <state relative-caret-position="1071">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter-input.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/crud.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="238">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -110,8 +118,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/admincrud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="442">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/datatable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="591" column="56" selection-start-line="591" selection-start-column="56" selection-end-line="591" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -127,8 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>numberwithcom</find>
-      <find>dr.</find>
       <find>1</find>
       <find>jant</find>
       <find>Jantung</find>
@@ -153,10 +177,12 @@
       <find>jadwal</find>
       <find>Senin</find>
       <find>jadwal_dokter</find>
-      <find>dokter</find>
       <find>tbldokter</find>
-      <find>list_dokter</find>
       <find>foto</find>
+      <find>janji_pasien</find>
+      <find>dokter</find>
+      <find>Foto DOkter</find>
+      <find>list_dokter</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -203,7 +229,6 @@
         <option value="$PROJECT_DIR$/resources/views/pages/jadwal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/buat-janji.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/00d45471-4a48-4ad6-825d-ec3c6d3ae0b0/console_2.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/resources/views/layouts/css.blade.php" />
         <option value="$PROJECT_DIR$/public/js/external.js" />
         <option value="$PROJECT_DIR$/app/list_dokter.php" />
@@ -212,17 +237,18 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dokter.blade.php" />
         <option value="$PROJECT_DIR$/public/js/conflic dattable.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_08_121702_jadwal_dokter.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-jadwal.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/datatable.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/jsontable.php" />
-        <option value="$PROJECT_DIR$/public/js/admincrud.js" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter-input.blade.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/crud.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/admincrud.js" />
+        <option value="$PROJECT_DIR$/public/js/datatable.js" />
       </list>
     </option>
   </component>
@@ -330,9 +356,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="542" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -350,24 +375,6 @@
             <path>
               <item name="live10 git fixed" type="b2602c69:ProjectViewProjectNode" />
               <item name="live10 git fixed" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="live10 git fixed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="live10 git fixed" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="live10 git fixed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="live10 git fixed" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="live10 git fixed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="live10 git fixed" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,6 +382,13 @@
               <item name="live10 git fixed" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="live10 git fixed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="live10 git fixed" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="dokter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="live10 git fixed" type="b2602c69:ProjectViewProjectNode" />
@@ -521,12 +535,16 @@
       <workItem from="1552569805137" duration="1518000" />
       <workItem from="1552575720527" duration="5910000" />
       <workItem from="1552581778464" duration="735000" />
-      <workItem from="1552636411207" duration="5042000" />
+      <workItem from="1552636411207" duration="12309000" />
+      <workItem from="1552718371833" duration="139000" />
+      <workItem from="1552719083816" duration="836000" />
+      <workItem from="1552728810860" duration="8415000" />
+      <workItem from="1552758673470" duration="2773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147310000" />
+    <option name="totallyTimeSpent" value="166740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -541,7 +559,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21331316" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22541603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -556,19 +574,18 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36988544" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29623568" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.290469" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.22390318" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_06_125557_create_laporan_pemeriksaan_table.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/pages/admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -752,20 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://00d45471-4a48-4ad6-825d-ec3c6d3ae0b0/schema/rsborobudur/table/list_dokter">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://00d45471-4a48-4ad6-825d-ec3c6d3ae0b0/schema/rsborobudur/table/dokter">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/00d45471-4a48-4ad6-825d-ec3c6d3ae0b0/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -785,13 +788,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/inc/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/scripts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -835,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/datatable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9367">
-          <caret line="551" column="29" selection-start-line="551" selection-start-column="29" selection-end-line="551" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/jsontable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -852,51 +841,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="19" column="103" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-jadwal-input.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/scripts.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="71" column="57" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
+        <state relative-caret-position="238">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/admincrud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+    <entry file="das://00d45471-4a48-4ad6-825d-ec3c6d3ae0b0/schema/rsborobudur/table/dokter">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://00d45471-4a48-4ad6-825d-ec3c6d3ae0b0/schema/rsborobudur/table/list_dokter">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://00d45471-4a48-4ad6-825d-ec3c6d3ae0b0/schema/rsborobudur/table/migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/external.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="-765">
+          <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter-input.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        <state relative-caret-position="-60">
+          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/crud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="238">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/admincrud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/dashboard-dokter.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/datatable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="591" column="56" selection-start-line="591" selection-start-column="56" selection-end-line="591" selection-end-column="56" />
         </state>
       </provider>
     </entry>

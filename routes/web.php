@@ -70,6 +70,7 @@ Route::middleware('usercheck')->group(function(){
     Route::get('/table/list_dokter',"jsontable@list_dokter");
     Route::get('js/admincrud.js');
     Route::post('/admin/action/dokter','crud@insertdokter');
+    Route::post('/admin/{table}','crud@delete');
 });
 Route::get('/table/jadwal_dokter_user','jsontable@jadwal_dokter_user');
 Route::get('/table/janji_jadwal','jsontable@jadwal_dokter_janji');
