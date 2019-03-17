@@ -600,6 +600,15 @@ $(document).ready(() => {
                     $(td).attr('data-table','list_dokter');
                 }
             },
+            {
+                targets:3,
+                createdCell: (td,cellData,rowData,row,col)=>{
+                    $(td).attr('data-row','foto');
+                    $(td).attr('data-id',rowData.id)
+                    $(td).attr('data-target',col)
+                    $(td).attr('data-table','list_dokter');
+                }
+            }
         ],
         processing:true,
         language: {
@@ -638,6 +647,7 @@ $(document).ready(() => {
     } );
     $(document).on('dblclick','.dt',function (e) {
         e.stopPropagation();
+        $(this).addClass('act');
         let row = $(this).data('row'),
             id = $(this).data('id'),
             target = $(this).data('target'),
@@ -677,14 +687,27 @@ $(document).ready(() => {
                     }
                 });
                 break;
+            case 'foto':
+                html = `
+                    ${data}
+                    <input type="file" data-table="${table}"
+                     data-row="${row}" data-id="${id}" autofocus>                
+                `;
+                $(this).closest('.rowss').find(`.dt${target}`).first().html(html);
+                break;
         }
         $('.a').first().focus();
 
     });
-    $(document).on('focusout','.dt',function (e) {
-        let table = $('table').attr('id');
-        $(`#${table}`).DataTable().ajax.reload();
-    })
+    $(document).on('mouseup',function (e) {
+        let container = $('.act');
+        if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            let table = $('table').attr('id');
+            $(`#${table}`).DataTable().ajax.reload();
+        }
+    });
     $(document).on('keypress','.a',function (e) {
         const val = $(this).val(),
               id = $(this).data('id'),
