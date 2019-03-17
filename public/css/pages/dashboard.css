@@ -79,3 +79,13 @@ main * h2 {
 .dataTable {
     margin: 0 !important;
 }
+
+#tbldokter img {
+    transition: transform .2s;
+}
+
+#tbldokter img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+}
