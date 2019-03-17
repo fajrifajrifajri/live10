@@ -14,6 +14,13 @@ class crud extends Controller
         DB::table($table)->where('id',$r->id)->delete();
         return $table;
     }
+    function update(Request $r){
+        DB::table($r->table)
+            ->where('id',$r->id)
+            ->update([
+                $r->row => $r->val
+            ]);
+    }
     function insertdokter(Request $r){
         $validator = Validator::make($r->all(),[
             'namadokter'=>'required',

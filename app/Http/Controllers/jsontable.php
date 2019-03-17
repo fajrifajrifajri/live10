@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\specialist;
 use Illuminate\Support\Facades\DB;
 use App\dokter;
 use function GuzzleHttp\Promise\all;
@@ -89,6 +90,11 @@ class jsontable extends Controller
             )->get();
         return response()->json([
             "data"=>$data
+        ]);
+    }
+    function specialist_dokter(){
+        return response()->json([
+            "data"=>specialist::all()
         ]);
     }
 }

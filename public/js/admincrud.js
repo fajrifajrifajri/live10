@@ -8,7 +8,7 @@ $(document).ready(function () {
         $.ajax({
             type:'POST',
             data:data,
-            url:`${base_url}/admin/action/${action}`,
+            url:`${base_admin}action/${action}`,
             enctype: 'multipart/form-data',
             cache: false,
             contentType: false,
@@ -17,7 +17,7 @@ $(document).ready(function () {
                 if(res){
                     alert(res)
                 }else{
-                    location.href = `${base_admin}action/${action}`
+                    location.href = `${base_admin}${action}`
                 }
             }
         })

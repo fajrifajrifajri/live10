@@ -585,11 +585,10 @@ $(document).ready(() => {
             {
                 targets: 1,
                 createdCell: (td, cellData, rowData, row, col) => {
-                    $(td).attr('data-row', 'nama_dokter');
+                    $(td).attr('data-row', 'nama_dokter');//field
                     $(td).attr('data-id',rowData.id)
                     $(td).attr('data-target',col)
-                    $(td).attr('data-table','a');
-                    console.log($(td).find('table').prop('id'))
+                    $(td).attr('data-table','list_dokter');//namatabel
                 }
             },
             {
@@ -598,8 +597,9 @@ $(document).ready(() => {
                     $(td).attr('data-row','spesialis');
                     $(td).attr('data-id',rowData.id)
                     $(td).attr('data-target',col)
+                    $(td).attr('data-table','list_dokter');
                 }
-            }
+            },
         ],
         processing:true,
         language: {
@@ -641,42 +641,112 @@ $(document).ready(() => {
         let row = $(this).data('row'),
             id = $(this).data('id'),
             target = $(this).data('target'),
-            data = $(this).html();
-        $(this).closest('.rowss').find(`.dt${target}`).first().html(`
-            <input type="text" class="form-control a"
-                    data-row="${row}" data-id="${id}" value="${data}">
-            `);
+            table = $(this).data('table'),
+            data = $(this).html(),
+            html = '';
+        switch (row) {
+            case 'nama_dokter':
+                html = `
+                <input type="text" class="form-control a" data-table="${table}"
+                        data-row="${row}" data-id="${id}" value="${data}" autofocus>
+                `;
+                $(this).closest('.rowss').find(`.dt${target}`).first().html(html);
+                break;
+            case 'spesialis':
+                $.ajax({
+                    type:'GET',
+                    url:`${base_url}table/specialist_dokter`,
+                    success:res=>{
+                        // console.log(res.data[0].specialist)
+                        html= `
+                        <select class="form-control a" data-table="${table}"
+                            data-row="${row}" data-id="${id}" autofocus>
+                        `
+                        for(let i = 0;i < res.data.length; i++){
+                            let obj = res.data[i],
+                                selected = '';
+                            if(obj.specialist === data){
+                                selected = 'selected'
+                            }
+                            html+=`<option value="${obj.id}" ${selected}>${obj.specialist}</option>\n`
+                        }
+                        html+= `
+                            </select>
+                        `
+                        $(this).closest('.rowss').find(`.dt${target}`).first().html(html);
+                    }
+                });
+                break;
+        }
         $('.a').first().focus();
 
     });
     $(document).on('focusout','.dt',function (e) {
-        // let target = $(this).data('target')
-        table.ajax.reload();
-        // $('.rowss').find(`.dt${target}`).html(ori);
+        let table = $('table').attr('id');
+        $(`#${table}`).DataTable().ajax.reload();
     })
     $(document).on('keypress','.a',function (e) {
-        const val = $(this).val();
-        const id = $(this).data('id');
-        const row = $(this).data('row');
-        if(e.which == 13){
+        const val = $(this).val(),
+              id = $(this).data('id'),
+              row = $(this).data('row'),
+              table = $(this).data('table');
+        if( $(e.target).is('input') && e.which == 13){
             $.ajax({
                 type:'POST',
-                url:'action.php',
+                url:`${base_admin}action/update`,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 data:{
                     val:val,
                     id:id,
-                    row:row
+                    row:row,
+                    table:table
                 },
                 success: res=>{
                     if(res){
                         alert(res)
                     }else{
-                        table.ajax.reload();
+                        $('#'+table).DataTable().ajax.reload();
                     }
+                },
+                error: xhr => {
+                    // console.log(xhr);
+                    console.log(xhr.responseJSON.message);
                 }
             })
-        }else{
-
+        }
+    })
+    $(document).on('change','.a',function (e) {
+        const val = $(this).val(),
+            id = $(this).data('id'),
+            row = $(this).data('row'),
+            table = $(this).data('table');
+        if($(e.target).is('select')){
+            $.ajax({
+                type:'POST',
+                url:`${base_admin}action/update`,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data:{
+                    val:val,
+                    id:id,
+                    row:row,
+                    table:table
+                },
+                success: res=>{
+                    if(res){
+                        alert(res)
+                    }else{
+                        $('#'+table).DataTable().ajax.reload();
+                    }
+                },
+                error: xhr => {
+                    // console.log(xhr);
+                    console.log(xhr.responseJSON.message);
+                }
+            })
         }
     })
     // table.buttons().container()
