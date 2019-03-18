@@ -450,17 +450,17 @@ $(document).ready(() => {
             {
                 title:'Nama dokter',
                 "data": "nama",
-                "sClass":"text-center"
+                "sClass":"text-center dt dt1"
             },
             {
                 title: "Specialis Dokter",
                 "data": "specialist",
-                "sClass":"text-center",
+                "sClass":"text-center dt dt2",
             },
             {
                 title: "Hari",
                 "data": "hari",
-                "sClass":"text-center",
+                "sClass":"text-center dt dt3",
                 render:(t,e,a)=>{
                     return dayNames[parseInt(t)];
             }
@@ -468,12 +468,12 @@ $(document).ready(() => {
             {
                 title: "Jam Awal",
                 "data": "jamawal",
-                "sClass":"text-center",
+                "sClass":"text-center dt dt4",
             },
             {
                 title: "Jam Akhir",
                 "data": "jamakhir",
-                "sClass":"text-center",
+                "sClass":"text-center dt dt5",
             },
             {
                 "data": "id",
@@ -490,6 +490,45 @@ $(document).ready(() => {
                     `;
                 }
             },
+        ],
+        columnDefs: [
+            {
+                targets: 1,
+                createdCell: (td, cellData, rowData, row, col) => {
+                    $(td).attr('data-row', 'nama_dokter');//field
+                    $(td).attr('data-id', rowData.id)
+                    $(td).attr('data-target', col)
+                    $(td).attr('data-table', 'jadwal_dokter');//namatabel
+                }
+            },
+            {
+                targets: 2,
+                createdCell: (td, cellData, rowData, row, col) => {
+                    $(td).attr('data-row', 'specialist');//field
+                    $(td).attr('data-id',rowData.id)
+                    $(td).attr('data-target',col)
+                    $(td).attr('data-table','dokter');//namatabel
+                }
+            },
+            {
+                targets: 3,
+                createdCell: (td, cellData, rowData, row, col) => {
+                    $(td).attr('data-row', 'hari');//field
+                    $(td).attr('data-id',rowData.id)
+                    $(td).attr('data-target',col)
+                    $(td).attr('data-table','jadwal_dokter');//namatabel
+                }
+            },
+            {
+                targets: 4,
+                createdCell: (td, cellData, rowData, row, col) => {
+                    $(td).attr('data-row', 'jamawal');//field
+                    $(td).attr('data-id',rowData.id)
+                    $(td).attr('data-target',col)
+                    $(td).attr('data-table','dokter');//namatabel
+                    $(td).attr('data-table','dokter');//namatabel
+                }
+            }
         ],
         processing:true,
         language: {
@@ -612,8 +651,7 @@ $(document).ready(() => {
         ],
         processing:true,
         language: {
-            processing:'<div class="spinner-border" role="status"></div>',
-
+            processing:'<span>Please Wait</span><div class="spinner-border" role="status"></div>',
             "aria": {
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
@@ -645,6 +683,15 @@ $(document).ready(() => {
         ],
         "pageLength": 10
     } );
+    let html;
+    $(document).on('hover','.dt',function (e) {
+        html = $(this).html();
+        alert(html)
+        e.stopPropagation()
+        $(this).append('<span class="plusadd">+</span>');
+    },function () {
+        $(this).html(html)
+    })
     $(document).on('dblclick','.dt',function (e) {
         e.stopPropagation();
         $(this).addClass('act');
@@ -699,14 +746,18 @@ $(document).ready(() => {
         $('.a').first().focus();
 
     });
-    $(document).on('mouseup',function (e) {
-        let container = $('.act');
-        if (!container.is(e.target) // if the target of the click isn't the container...
-            && container.has(e.target).length === 0) // ... nor a descendant of the container
-        {
-            let table = $('table').attr('id');
-            $(`#${table}`).DataTable().ajax.reload();
+    $(document).on('focusout','.dt',function (e) {
+        let table = $('table').attr('id');
+        if($('input[type="file"]')){
+
         }
+        $(`#${table}`).DataTable().ajax.reload();
+        // let container = $('.act');
+        // if (!container.is(e.target) // if the target of the click isn't the container...
+        //     && container.has(e.target).length === 0) // ... nor a descendant of the container
+        // {
+        //
+        // }
     });
     $(document).on('keypress','.a',function (e) {
         const val = $(this).val(),
@@ -740,6 +791,9 @@ $(document).ready(() => {
             })
         }
     })
+    $(document).on('click',`input[type="file"]`,function (e) {
+        $('.dt').focus();
+    });
     $(document).on('change','.a',function (e) {
         const val = $(this).val(),
             id = $(this).data('id'),
@@ -774,4 +828,4 @@ $(document).ready(() => {
     })
     // table.buttons().container()
     //     .appendTo( $('.col-sm-6:eq(0)', table.table().container() ) );
-})
+});
