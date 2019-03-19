@@ -14,7 +14,21 @@
     <div class="col-lg-2">
         @include('pages.dashboard.menu')
     </div>
-    <div class="col-lg-10 p-4">
+    <div id="front" class="col-lg-10 p-4">
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="{{ asset('img/Borobudur logo full.png') }}" alt="borobudur logo">
+            </div>
+            <div class="col-lg-9 position-relative">
+                <div class="position-relative">
+                    <h5>Alamat</h5>
+                    <span>rs. borobudur</span><br>
+                    <span>jl. ampera no.37 pontianak</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Number of visitor</h2>
         <div id="chartdiv"></div>
     </div>
 </main>
