@@ -491,35 +491,60 @@ $(document).ready(() => {
             {
                 title: "#",
                 "data": "id",
-                "sClass": "text-center",
+                "sClass": "text-center aing-teh-macan",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 title: 'Nama dokter',
                 "data": "nama",
-                "sClass": "text-center dt dt1"
+                "sClass": "text-center aing-teh-macan dt dt1",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 title: "Specialis Dokter",
                 "data": "specialist",
-                "sClass": "text-center dt dt2",
+                "sClass": "text-center aing-teh-macan dt dt2",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 title: "Hari",
                 "data": "hari",
-                "sClass": "text-center dt dt3",
+                "sClass": "text-center aing-teh-macan dt dt3",
                 render: (t, e, a) => {
-                    return dayNames[parseInt(t)];
+                    return dayNames[parseInt(t)] + '<a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>';
                 }
             },
             {
                 title: "Jam Awal",
                 "data": "jamawal",
-                "sClass": "text-center dt dt4",
+                "sClass": "text-center aing-teh-macan dt dt4",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 title: "Jam Akhir",
                 "data": "jamakhir",
-                "sClass": "text-center dt dt5",
+                "sClass": "text-center aing-teh-macan dt dt5",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 "data": "id",
