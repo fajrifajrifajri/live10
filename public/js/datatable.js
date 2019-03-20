@@ -634,6 +634,11 @@ $(document).ready(() => {
                 title: 'No',
                 "data": "id",
                 "sClass": "text-center",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 title: 'Nama Dokter',
