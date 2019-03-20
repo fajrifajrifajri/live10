@@ -107,7 +107,7 @@
     transform: scale(1.5);
 }
 
-.sorting_1 {
+.aing-teh-macan {
     position: relative;
 }
 
@@ -120,6 +120,6 @@
     visibility: hidden;
 }
 
-.sorting_1:hover .halig-ku-aing {
+.aing-teh-macan:hover .halig-ku-aing {
     visibility: visible;
 }

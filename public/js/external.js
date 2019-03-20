@@ -121,6 +121,7 @@ $(document).ready(() => {
                     $(`.dokter${data}`).show()
                 });
             }
+        }
 
     /*
         $(".sorting_1").hover(

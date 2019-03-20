@@ -633,7 +633,7 @@ $(document).ready(() => {
             {
                 title: 'No',
                 "data": "id",
-                "sClass": "text-center",
+                "sClass": "text-center aing-teh-macan",
                 "render": function(data){
                     return data + `
                     <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
@@ -643,17 +643,27 @@ $(document).ready(() => {
             {
                 title: 'Nama Dokter',
                 "data": "nama_dokter",
-                "sClass": "text-center dt dt1",
+                "sClass": "text-center aing-teh-macan dt dt1",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 title: 'Spesialis',
                 "data": "spesialis",
-                "sClass": "text-center dt dt2",
+                "sClass": "text-center aing-teh-macan dt dt2",
+                "render": function(data){
+                    return data + `
+                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    `;
+                }
             },
             {
                 title: 'Foto Dokter',
                 "data": "foto",
-                "sClass": "text-center dt dt3",
+                "sClass": "text-center aing-teh-macan dt dt3",
                 "targets": 0,
                 "orderable": false,
                 render: (t, e, a) => {
