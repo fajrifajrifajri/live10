@@ -122,7 +122,8 @@ $(document).ready(() => {
                 });
             }
 
-    $(".sorting_1").hover(
+    /*
+        $(".sorting_1").hover(
         function(){
             $(this).find(".halig-ku-aing:hover").show();
         },
@@ -130,6 +131,7 @@ $(document).ready(() => {
             $(this).find(".halig-ku-aing:hover").hide();
         };
     );
+    */
 
         // $.ajax({
         //     type:'POST',
