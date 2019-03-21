@@ -53,12 +53,21 @@ class PagesController extends Controller
     public function getDashboardJadwalInput(){
         return view('pages.dashboard.dashboard-jadwal-input');
     }
+    public function getDashboardJadwalEdit(){
+        return view('pages.dashboard.dashboard-jadwal-edit');
+    }
     public function getDashboardDokter(){
         return view('pages.dashboard.dashboard-dokter');
     }
     public function getDashboardDokterInput(){
 
         return view('pages.dashboard.dashboard-dokter-input',[
+            "spesialis"=>specialist::all()
+        ]);
+    }
+    public function getDashboardDokterEdit(){
+
+        return view('pages.dashboard.dashboard-dokter-edit',[
             "spesialis"=>specialist::all()
         ]);
     }

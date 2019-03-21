@@ -121,33 +121,7 @@ $(document).ready(() => {
                     $(`.dokter${data}`).show()
                 });
             }
-        }
-
-    /*
-        $(".sorting_1").hover(
-        function(){
-            $(this).find(".halig-ku-aing:hover").show();
-        },
-        function(){
-            $(this).find(".halig-ku-aing:hover").hide();
-        };
-    );
-    */
-
-        // $.ajax({
-        //     type:'POST',
-        //     headers: {
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //     },
-        //     url:`${base_url}dokter-pagination`,
-        //     data:{
-        //         pagination: data
-        //     },
-        //     success:res =>{
-        //         $('#pagi-dokter').html(res);
-        //     }
-        // })
-    });
+        });
     let btns = document.getElementsByClassName( 'btn-data' );
     for ( let btn of btns ) {
         btn.onclick = function() {

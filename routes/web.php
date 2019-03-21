@@ -57,6 +57,10 @@ Route::middleware('usercheck')->group(function(){
         'uses' => 'PagesController@getDashboardJadwalInput',
         'as' => 'dashboard-jadwal-input'
         ]);
+    Route::get('/admin/jadwal/edit', [
+        'uses' => 'PagesController@getDashboardJadwalEdit',
+        'as' => 'dashboard-jadwal-edit'
+            ]);
     Route::get('/admin/dokter', [
         'uses' => 'PagesController@getDashboardDokter',
         'as' => 'dashboard-dokter'
@@ -64,6 +68,10 @@ Route::middleware('usercheck')->group(function(){
     Route::get('/admin/dokter/add', [
         'uses' => 'PagesController@getDashboardDokterInput',
         'as' => 'dashboard-dokter-input'
+        ]);
+    Route::get('/admin/dokter/edit', [
+        'uses' => 'PagesController@getDashboardDokterEdit',
+        'as' => 'dashboard-dokter-edit'
         ]);
     Route::get('/table/janji_pasien',"jsontable@janji_pasien");
     Route::get('/table/jadwal_dokter',"jsontable@jadwal_dokter");
