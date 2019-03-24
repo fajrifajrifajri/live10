@@ -31,15 +31,37 @@ class crud extends Controller
             return $validator->errors();
         }else {
             $file = $r->file('foto');
-            $path = $file->store('public/dokter');
-            $exppath = explode('/',$path);
+            $filename = time().\Session::get('user').rand(100,1000);
+            \Storage::disk('uploads')->put($filename,\File::get($file));
             //------------------------------------------------
             $dokter = new list_dokter();
             $dokter->nama_dokter = $r->namadokter;
             $dokter->spesialis = $r->spesialis;
-            $dokter->foto = $exppath[2];
+            $dokter->foto = $filename;
             $dokter->save();
             return "";
         }
+    }
+    function updatedokter(Request $r){
+        $dokter = new list_dokter();
+        $datadokter = $dokter::findOrFail($r->id);
+        if($r->hasFile('foto')){
+            $file = $r->file('foto');
+            $filename = time().\Session::get('user').rand(100,1000);
+            \Storage::disk('uploads')->put($filename,\File::get($file));
+            //------------------------------------------------
+            $datadokter->update([
+                "nama_dokter"=>$r->namadokter,
+                "spesialis"=>$r->spesialis,
+                "foto"=>$filename,
+            ]);
+        }else{
+            $datadokter->update([
+                "nama_dokter"=>$r->namadokter,
+                "spesialis"=>$r->spesialis,
+            ]);
+        }
+
+        return "";
     }
 }

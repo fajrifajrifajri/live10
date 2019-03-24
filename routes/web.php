@@ -69,7 +69,7 @@ Route::middleware('usercheck')->group(function(){
         'uses' => 'PagesController@getDashboardDokterInput',
         'as' => 'dashboard-dokter-input'
         ]);
-    Route::get('/admin/dokter/edit', [
+    Route::get('/admin/dokter/edit/{id}', [
         'uses' => 'PagesController@getDashboardDokterEdit',
         'as' => 'dashboard-dokter-edit'
         ]);
@@ -79,6 +79,7 @@ Route::middleware('usercheck')->group(function(){
     Route::get('/table/specialist_dokter','jsontable@specialist_dokter');
     Route::get('js/admincrud.js');
     Route::post('/admin/action/dokter','crud@insertdokter');
+    Route::post('/admin/action/update/dokter','crud@updatedokter');
     Route::post('/admin/action/delete/{table}','crud@delete');
     Route::post('/admin/action/update','crud@update');
 });

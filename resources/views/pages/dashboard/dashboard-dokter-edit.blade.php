@@ -18,14 +18,15 @@
         <div class="col-sm-6">
             <h2>Nama Dokter</h2>
             <form method="post" data-action="dokter" action="http://localhost:8000/admin/action/dokter" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="{{$datadokter['id']}}">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <input type="text" class="form-control" name="namadokter" id="namadokter" placeholder="Nama dokter">
+                    <input type="text" class="form-control" name="namadokter" id="namadokter" placeholder="Nama dokter" value="{{$datadokter['nama_dokter']}}">
                 </div>
                 <div class="form-group">
                     <select name="spesialis" id="spesialis" class="form-control">
                         @foreach($spesialis as $data_specialist)
-                            <option value="{{$data_specialist['id']}}">{{$data_specialist['specialist']}}</option>
+                            <option value="{{$data_specialist['id']}}" @if($datadokter['spesialis'] == $data_specialist['id']) selected @endif>{{$data_specialist['specialist']}}</option>
                         @endforeach
                     </select>
                 </div>

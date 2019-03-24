@@ -65,11 +65,16 @@ class PagesController extends Controller
             "spesialis"=>specialist::all()
         ]);
     }
-    public function getDashboardDokterEdit(){
-
-        return view('pages.dashboard.dashboard-dokter-edit',[
-            "spesialis"=>specialist::all()
-        ]);
+    public function getDashboardDokterEdit($id){
+        $data = list_dokter::find($id);
+        if($data){
+            return view('pages.dashboard.dashboard-dokter-edit',[
+                "spesialis"=>specialist::all(),
+                "datadokter"=>$data
+            ]);
+        }else{
+            return redirect()->back();
+        }
     }
     public function getBuatjanjiform($dokterr){
         if($dokterr) {

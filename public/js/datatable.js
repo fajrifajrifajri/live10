@@ -692,7 +692,7 @@ $(document).ready(() => {
                 "targets": 0,
                 "orderable": false,
                 render: (t, e, a) => {
-                    return `<img width="100%" alt="dokter" src="${base_url}storage/dokter/${t}">`
+                    return `<img width="100%" alt="dokter" src="${base_url}uploads/${t}">`
                 }
             },
             {

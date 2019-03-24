@@ -5,10 +5,12 @@ $(document).ready(function () {
         e.preventDefault();
         const data = new FormData(this);
         const action = $(this).data('action');
+        const st = $(this).find('input[type="submit"]').val()
+        const url = st === "UBAH" ? `${base_admin}action/update/${action}` : `${base_admin}action/${action}`;
         $.ajax({
             type:'POST',
             data:data,
-            url:`${base_admin}action/${action}`,
+            url: url,
             enctype: 'multipart/form-data',
             cache: false,
             contentType: false,
@@ -27,7 +29,7 @@ $(document).ready(function () {
         const table = $(this).data("table")
         $.ajax({
             type:'POST',
-            url:`${base_admin}${table}`,
+            url:`${base_admin}action/delete/${table}`,
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },

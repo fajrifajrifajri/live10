@@ -19,7 +19,7 @@ class action extends Controller
         $janji->harga = $r->harga;
         $janji->tgl_bertemu = $r->tgl_bertemu;
         $janji->save();
-        return "a";
+        return "";
     }
     function logout(){
         \Session::forget('user');
