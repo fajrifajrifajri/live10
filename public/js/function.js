@@ -48,7 +48,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.lengthvalidate').bind('keyup keypress keydown', function validatelength() {
+    $('.lengthvalidate').bind('keyup keypress keydown', function () {
         var max = $(this).data('max-length');
         var value = $(this).val();
         var alertt = $(this).attr('allow-alert');

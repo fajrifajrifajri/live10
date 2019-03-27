@@ -57,7 +57,7 @@ Route::middleware('usercheck')->group(function(){
         'uses' => 'PagesController@getDashboardJadwalInput',
         'as' => 'dashboard-jadwal-input'
         ]);
-    Route::get('/admin/jadwal/edit', [
+    Route::get('/admin/jadwal/edit/{id}', [
         'uses' => 'PagesController@getDashboardJadwalEdit',
         'as' => 'dashboard-jadwal-edit'
             ]);
@@ -80,6 +80,8 @@ Route::middleware('usercheck')->group(function(){
     Route::get('js/admincrud.js');
     Route::post('/admin/action/dokter','crud@insertdokter');
     Route::post('/admin/action/update/dokter','crud@updatedokter');
+    Route::post('/admin/action/jadwal','crud@insertjadwal');
+    Route::post('/admin/action/update/jadwal','crud@updatejadwal');
     Route::post('/admin/action/delete/{table}','crud@delete');
     Route::post('/admin/action/update','crud@update');
 });

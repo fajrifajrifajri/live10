@@ -32,7 +32,7 @@ class PagesController extends Controller
                 'list_dokter.spesialis',
                 '=',
                 'specialist_dokter.id'
-                )->get();
+            )->get();
         return view('pages.dokter',[
             "dokter"=>$data_dokter,
             "list_dokter"=>specialist::all()
@@ -51,10 +51,20 @@ class PagesController extends Controller
         return view('pages.dashboard.dashboard-jadwal');
     }
     public function getDashboardJadwalInput(){
-        return view('pages.dashboard.dashboard-jadwal-input');
+        return view('pages.dashboard.dashboard-jadwal-input',[
+            "tipe_dokter"=>specialist::all()
+        ]);
     }
-    public function getDashboardJadwalEdit(){
-        return view('pages.dashboard.dashboard-jadwal-edit');
+    public function getDashboardJadwalEdit($id){
+        $data = dokter::find($id);
+        if($data) {
+            return view('pages.dashboard.dashboard-jadwal-edit', [
+                "tipe_dokter" => specialist::all(),
+                "data_dokter" => $data
+            ]);
+        }else{
+            return redirect()->back();
+        }
     }
     public function getDashboardDokter(){
         return view('pages.dashboard.dashboard-dokter');

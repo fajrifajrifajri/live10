@@ -4,8 +4,14 @@ $(document).ready(() => {
     let host = window.location.host;
     $('img').prop('draggable',false)
     $('#spesialis').select2({
-        placeholder: "Pilih Specalist"
+        placeholder: " - Pilih Specalist - "
     });
+    $('#hari').select2({
+        placeholder: " - Pilih Hari - "
+    });
+    $('#specialist_dokter').select2({
+        placeholder: " - Pilih Specialist Dokter - "
+    })
     $('.owl-carousel').owlCarousel({
         loop: true,
         autoplay: true,

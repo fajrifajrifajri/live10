@@ -5,8 +5,7 @@ $(document).ready(function () {
         e.preventDefault();
         const data = new FormData(this);
         const action = $(this).data('action');
-        const st = $(this).find('input[type="submit"]').val()
-        const url = st === "UBAH" ? `${base_admin}action/update/${action}` : `${base_admin}action/${action}`;
+        const url =  $(this).find('input[type="submit"]').val() === "UBAH" ? `${base_admin}action/update/${action}` : `${base_admin}action/${action}`;
         $.ajax({
             type:'POST',
             data:data,
@@ -21,6 +20,9 @@ $(document).ready(function () {
                 }else{
                     location.href = `${base_admin}${action}`
                 }
+            },
+            error: xhr=>{
+                console.log(xhr.responseJSON.message)
             }
         })
     })

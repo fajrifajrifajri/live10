@@ -484,7 +484,7 @@ $(document).ready(() => {
     });
     // tbljanji.buttons().container().appendTo($('.col-sm-6:eq(0)'),tbljanji.table().container());
 
-    let tbljadwal = $('#tbljadwal').DataTable({
+    let tbljadwal = $('#tbldokter').DataTable({
         responsive: true,
         ajax: `${base_url}table/jadwal_dokter`,
         columns: [
@@ -492,58 +492,41 @@ $(document).ready(() => {
                 title: "#",
                 "data": "id",
                 "sClass": "text-center aing-teh-macan",
-                "render": function(data){
-                    return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
-                    `;
-                }
             },
             {
                 title: 'Nama dokter',
                 "data": "nama",
                 "sClass": "text-center aing-teh-macan dt dt1",
-                "render": function(data){
-                    return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
-                    `;
-                }
             },
             {
                 title: "Specialis Dokter",
                 "data": "specialist",
                 "sClass": "text-center aing-teh-macan dt dt2",
-                "render": function(data){
-                    return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
-                    `;
-                }
             },
             {
                 title: "Hari",
                 "data": "hari",
                 "sClass": "text-center aing-teh-macan dt dt3",
                 render: (t, e, a) => {
-                    return dayNames[parseInt(t)] + '<a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>';
+                    return dayNames[parseInt(t)];
                 }
             },
             {
                 title: "Jam Awal",
                 "data": "jamawal",
                 "sClass": "text-center aing-teh-macan dt dt4",
-                "render": function(data){
-                    return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
-                    `;
-                }
             },
             {
                 title: "Jam Akhir",
                 "data": "jamakhir",
                 "sClass": "text-center aing-teh-macan dt dt5",
-                "render": function(data){
-                    return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
-                    `;
+            },
+            {
+                title: "Gambar Dokter",
+                data: "gambardokter",
+                sClass: 'text-center',
+                render: data=>{
+                    return `<img src="${base_url}uploads/${data}" alt="gambar dokter" width="100%"/>`
                 }
             },
             {
@@ -551,12 +534,13 @@ $(document).ready(() => {
                 width: '150px',
                 "sClass": "text-center",
                 "orderable": false,
-                "mRender": data => {
+                "mRender": (data,e,a) => {
+                    console.log(a);
                     $('.btn-data').tooltip();
                     return `
-                    <button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="jadwal" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></button>
+                    <a href="${base_admin}jadwal/edit/${data}" type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="jadwal" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fas fa-pen"></i></a>
                     &nbsp;
-                    <button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="jadwal" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>
+                    <button type="button" class="btn btn-circle btn-danger btn-xs btn-data btn-del" data-id=${data} data-table="dokter" data-toggle="tooltip" data-placement="top" title="Hapus Data"><i class="fas fa-times"></i></button>
                     
                     `;
                 }
@@ -661,7 +645,7 @@ $(document).ready(() => {
                 "sClass": "text-center aing-teh-macan",
                 "render": function(data){
                     return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    
                     `;
                 }
             },
@@ -671,7 +655,7 @@ $(document).ready(() => {
                 "sClass": "text-center aing-teh-macan dt dt1",
                 "render": function(data){
                     return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    
                     `;
                 }
             },
@@ -681,7 +665,7 @@ $(document).ready(() => {
                 "sClass": "text-center aing-teh-macan dt dt2",
                 "render": function(data){
                     return data + `
-                    <a href="#" class="halig-ku-aing"><i class="fas fa-pen"></i></a>
+                    
                     `;
                 }
             },

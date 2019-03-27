@@ -21,9 +21,11 @@
                 <input type="hidden" name="id" value="{{$datadokter['id']}}">
                 {{csrf_field()}}
                 <div class="form-group">
+                    <label for="">Nama Dokter :</label>
                     <input type="text" class="form-control" name="namadokter" id="namadokter" placeholder="Nama dokter" value="{{$datadokter['nama_dokter']}}">
                 </div>
                 <div class="form-group">
+                    <label for="">Specialist Dokter :</label>
                     <select name="spesialis" id="spesialis" class="form-control">
                         @foreach($spesialis as $data_specialist)
                             <option value="{{$data_specialist['id']}}" @if($datadokter['spesialis'] == $data_specialist['id']) selected @endif>{{$data_specialist['specialist']}}</option>
@@ -31,6 +33,7 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="">Foto Dokter :</label>
                     <input type="file" name="foto" id="foto" class="form-control-file">
                 </div>
                 <input type="submit" class="btn btn-primary btn-lg btn-block" value="UBAH">

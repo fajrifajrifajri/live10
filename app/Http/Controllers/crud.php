@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\jadwal_dokter;
 use Illuminate\Http\Request;
 use Validator;
 use App\dokter;
@@ -61,7 +62,37 @@ class crud extends Controller
                 "spesialis"=>$r->spesialis,
             ]);
         }
-
         return "";
+    }
+    function insertjadwal(Request $r){
+        $file = $r->file('foto_dokter');
+        $filename = time().\Session::get('user').rand(100,1000);
+        \Storage::disk('uploads')->put($filename,\File::get($file));
+        //------------------------------------------------------------------
+        $dokter = new dokter();
+        $dokter->nama = "Dr. ".$r->namadokter;
+        $dokter->hari = $r->hari;
+        $dokter->jamawal = $r->jamawal;
+        $dokter->jamakhir = $r->jamakhir;
+        $dokter->specialist = $r->specialist_dokter;
+        $dokter->gambardokter = $filename;
+        $dokter->save();
+        return "";
+    }
+    function updatejadwal(Request $r){
+        $dokter = new dokter();
+        $data = $dokter::find('id')->first();
+        $dokter->nama = "Dr. ".$r->namadokter;
+        $dokter->hari = $r->hari;
+        $dokter->jamawal = $r->jamawal;
+        $dokter->jamakhir = $r->jamakhir;
+        $dokter->specialist = $r->specialist_dokter;
+        if($r->hasFile('foto_dokter')){
+            $file = $r->file('foto_dokter');
+            $filename = time().\Session::get('user').rand(100,1000);
+            \Storage::disk('uploads')->put($filename,\File::get($file));
+            $dokter->gambardokter = $filename;
+        }
+        $dokter->save();
     }
 }

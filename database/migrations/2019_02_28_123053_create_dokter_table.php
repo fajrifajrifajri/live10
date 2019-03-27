@@ -16,7 +16,6 @@ class CreateDokterTable extends Migration
         Schema::create('dokter', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama')->nullable();
-            $table->integer('tipe_dokter');
             $table->string('hari');
             $table->time('jamawal');
             $table->time('jamakhir');

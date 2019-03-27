@@ -61,7 +61,8 @@ class jsontable extends Controller
             'specialist_dokter.specialist as specialist',
             'hari',
             'jamawal',
-            'jamakhir'
+            'jamakhir',
+            'gambardokter'
         )->join(
             'specialist_dokter',
             'dokter.specialist',

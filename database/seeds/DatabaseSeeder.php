@@ -19,83 +19,74 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Abdurahman",
-            'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "22:00:00",
-            'specialist' => "1",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Sultan Hamid",
-            'tipe_dokter' => "2",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "22:00:00",
-            'specialist' => "2",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Susanti",
-            'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "22:00:00",
-            'specialist' => "3",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Siparman",
-            'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "1",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Ramah",
-            'tipe_dokter' => "2",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "1",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Drs. Susanto",
-            'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "22:00:00",
-            'specialist' => "3",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Budiarjo",
-            'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "22:00:00",
-            'specialist' => "2",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Antonius",
-            'tipe_dokter' => "2",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "2",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('dokter')->insert([
             'nama' => "Dr. Wahid Bahyu",
-            'tipe_dokter' => "1",
             'jamawal' => "12:00:00",
             'hari'=>rand(1,7),
             'jamakhir' => "21:00:00",
-            'specialist' => "3",
+            'specialist' => rand(1,3),
             'gambardokter'=>"asd.jpg"
         ]);
         DB::table('specialist_dokter')->insert([
@@ -176,7 +167,6 @@ class DatabaseSeeder extends Seeder
 //        foreach (range(1,50) as $index){
 //            DB::table('dokter')->insert([
 //                'name'=> $faker->name,
-//                'tipe_dokter' => $faker->randomDigit,
 //                'jamawal'=>$faker->time('H:i:s',$max = 'now'),
 //                'jamakhir'=>$faker->time('H:i:s',$max = 'now'),
 //                'keahlian'=>Str::random('10')
